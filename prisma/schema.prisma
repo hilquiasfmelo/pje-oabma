@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model States {
+  id         String   @id @default(uuid())
+  name       String   @unique
+  acronym    String   @unique
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+
+  Courts Courts[]
+
+  @@map("states")
+}
+
+model Courts {
+  id         String   @id @default(uuid())
+  name       String
+  url        String   @unique
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+
+  state     States @relation(fields: [states_id], references: [id])
+  states_id String
+
+  @@map("courts")
+}
