@@ -6,6 +6,7 @@ export const Container = styled('div', {
     alignItems: 'center',
     justifyContent: 'center',
     height: '70vh',
+    gap: '$40'
 })
 
 export const Content = styled('div', {
@@ -19,25 +20,25 @@ export const Content = styled('div', {
     'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.9) 0px 3px 7px -3px',
 
     label: {
-        display: 'flex',
-        flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '$3 $4',
+    gap: '$2',
+
+    input: {
+        fontSize: '$md',
         padding: '$3 $4',
-        gap: '$2',
+        border: '2px solid $gray11',
+        borderRadius: '$sm',
+        fontWeight: '$bold',
 
-        input: {
-            fontSize: '$md',
-            padding: '$3 $4',
-            border: '2px solid $gray11',
-            borderRadius: '$sm',
-            fontWeight: '$bold',
-    
-            '&:focus': {
-                border: '2px solid $orange9',
-            }
-        },
-
-        [`> ${Button}`]: {
-            fontSize: '$md'
+        '&:focus': {
+            border: '2px solid $orange9',
         }
-    },  
+    },
+
+    [`> ${Button}`]: {
+        fontSize: '$md'
+    }
+},  
 })

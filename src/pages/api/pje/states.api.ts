@@ -32,7 +32,7 @@ export default async function handler(
   if (stateName || stateAcronym) {
     return res.status(400).json({
       message:
-        'State or abbreviation already registered, try another one agains.',
+        'Esse estado ou sigla já está cadastrado, tente outro novamente!',
     })
   }
 

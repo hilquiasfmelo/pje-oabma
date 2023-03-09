@@ -3,7 +3,7 @@
     "next/core-web-vitals", 
     "@rocketseat/eslint-config/react"
   ],
-  // "rules": {
-  //   "prettier/prettier": "off"
-  // }
+  "rules": {
+    "prettier/prettier": "off"
+  }
 }
