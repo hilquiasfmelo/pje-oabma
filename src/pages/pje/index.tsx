@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
 import Image from 'next/image'
-
-import direitoLogo from '@/assets/direito-logo.png'
 import { API } from '@/lib/axios'
+
+import pjeLogo from '@/assets/pje-oabma.png'
 
 import { Text } from '@/components/Text'
 import { Button } from '@/components/Button'
@@ -29,11 +29,6 @@ export function Pje() {
 
   const stateId: string = watch('stateId')
   const url: string = watch('url')
-
-  console.log({
-    stateId,
-    url,
-  })
 
   const { data: states } = useQuery<StatesProps[]>(['states'], async () => {
     const response = await API.get('/pje/get-states')
@@ -71,7 +66,14 @@ export function Pje() {
   return (
     <Container>
       <Header>
-        <Image src={direitoLogo} width={120} alt="Logo do Direito" />
+        <Image
+          src={pjeLogo}
+          width={140}
+          height={120}
+          priority
+          quality={100}
+          alt="Logo do Direito"
+        />
         <Text as="strong" size="5xl">
           O PJE está disponível em todo o Brasil, fique a vontade para usá-lo em
           qualquer estado!
@@ -84,9 +86,9 @@ export function Pje() {
           deseja acessar:
         </Text>
         <ContentOptions>
-          <select {...register('stateId')}>
-            <option value="" selected>
-              Defina o estado...
+          <select {...register('stateId')} defaultValue="">
+            <option disabled value="">
+              Selecione um estado...
             </option>
             {states?.map((state) => {
               return (
@@ -97,8 +99,8 @@ export function Pje() {
             })}
           </select>
 
-          <select {...register('url')}>
-            <option value="">Defina o tribunal...</option>
+          <select {...register('url')} defaultValue="">
+            <option>Defina o tribunal...</option>
             {courts.map((court) => {
               return (
                 <option key={court.id} value={court.url}>

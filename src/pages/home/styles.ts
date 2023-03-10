@@ -16,7 +16,7 @@ export const Content = styled('div', {
 })
 
 export const ContentPages = styled('div', {
-  margin: '$16',
+  margin: '$30',
   padding: '$10',
   border: '3px solid $blue9',
   borderRadius: '$sm',
@@ -26,7 +26,6 @@ export const ContentPages = styled('div', {
 
 export const ContentOptions = styled('div', {
   minWidth: 380,
-  // padding: '$14 $4',
 
   display: 'flex',
   flexDirection: 'column',

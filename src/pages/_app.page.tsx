@@ -5,6 +5,7 @@ import { Header } from '@/components/Header'
 import { ToastProvider } from '@/lib/react-toastify'
 
 import { globalStyles } from '../styles/global'
+import '../../public/scrollbar.css'
 
 import 'react-toastify/dist/ReactToastify.css'
 import { QueryClientProvider } from '@tanstack/react-query'

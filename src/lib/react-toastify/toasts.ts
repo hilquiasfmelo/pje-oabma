@@ -20,6 +20,7 @@ export function Toast({ message, type }: ToastProps) {
       boxShadow: 'rgba(0, 0, 0, 0.35) 5px 5px 15px',
       marginTop: '72px',
       padding: '15px 10px',
+      fontFamily: 'Roboto Slab, sans-serif',
     },
     theme: 'light',
     toastId: '',
