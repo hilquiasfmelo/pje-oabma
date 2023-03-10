@@ -12,10 +12,6 @@ export default function Home() {
           <Pje />
         </ContentPages>
         <ContentOptions>
-          <Button variant="pje">
-            <Text>Acessar PJE</Text>
-          </Button>
-
           <Button>
             <Text size="lg">OAB Maranhão</Text>
           </Button>

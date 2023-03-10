@@ -39,9 +39,10 @@ export default async function handler(
         },
       },
     },
+    orderBy: {
+      name: 'asc',
+    },
   })
 
-  return res.status(200).json({
-    courts,
-  })
+  return res.status(200).json(courts)
 }

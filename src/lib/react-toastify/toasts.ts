@@ -16,9 +16,10 @@ export function Toast({ message, type }: ToastProps) {
     progress: undefined,
     style: {
       color: '#121214',
-      fontSize: '14px',
+      fontSize: '17px',
       boxShadow: 'rgba(0, 0, 0, 0.35) 5px 5px 15px',
       marginTop: '72px',
+      padding: '15px 10px',
     },
     theme: 'light',
     toastId: '',

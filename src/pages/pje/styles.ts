@@ -49,17 +49,19 @@ export const ContentOptions = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   gap: '$4',
+  outline: 0,
 
   select: {
     width: '$64',
     padding: '$5',
     borderRadius: '$sm',
-    border: '2px solid $gray4',
+    border: '2px solid $orange9',
     fontSize: '$lg',
     color: '$gray1',
     background: '#FFF',
     cursor: 'pointer',
     appearance: 'none',
+    outline: 0,
 
     option: {
       padding: '$5',
@@ -67,6 +69,7 @@ export const ContentOptions = styled('div', {
       fontWeight: '$bold',
       color: '$gray5',
       borderRadius: '$sm',
+      outline: 0,
     },
   },
 })

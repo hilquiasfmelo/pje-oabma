@@ -1,11 +1,73 @@
-import { Text } from '@/components/Text'
-import { Container, Content, Header, ContentOptions } from './styles'
+import { useEffect, useState } from 'react'
+import { useQuery } from '@tanstack/react-query'
+import { useForm } from 'react-hook-form'
+import Image from 'next/image'
 
 import direitoLogo from '@/assets/direito-logo.png'
-import Image from 'next/image'
+import { API } from '@/lib/axios'
+
+import { Text } from '@/components/Text'
 import { Button } from '@/components/Button'
+import { Container, Content, Header, ContentOptions } from './styles'
+import { Toast } from '@/lib/react-toastify/toasts'
+
+interface StatesProps {
+  id: string
+  name: string
+  acronym: string
+}
+
+interface CourtsProps {
+  id: string
+  name: string
+  url: string
+}
 
 export function Pje() {
+  const { register, watch } = useForm()
+  const [courts, setCourts] = useState<CourtsProps[]>([])
+
+  const stateId: string = watch('stateId')
+  const url: string = watch('url')
+
+  console.log({
+    stateId,
+    url,
+  })
+
+  const { data: states } = useQuery<StatesProps[]>(['states'], async () => {
+    const response = await API.get('/pje/get-states')
+
+    return response.data
+  })
+
+  useEffect(() => {
+    if (stateId) {
+      const getCourts = async () => {
+        const response = await API.get<CourtsProps[]>(
+          `/pje/${stateId}/get-courts`,
+        )
+
+        setCourts(response.data)
+      }
+
+      getCourts()
+    }
+  }, [stateId])
+
+  async function handleAccessTribunal() {
+    if (stateId === '' || url === '') {
+      Toast({
+        type: 'error',
+        message: 'Por favor! Selecione um Estado e um Tribunal.',
+      })
+
+      return
+    }
+
+    window.open(url, '_blank')
+  }
+
   return (
     <Container>
       <Header>
@@ -22,24 +84,32 @@ export function Pje() {
           deseja acessar:
         </Text>
         <ContentOptions>
-          <select>
-            <option defaultValue="">Defina um estado...</option>
-            <option value="MA">MARANHÃO</option>
-            <option value="RJ">RIO DE JANEIRO</option>
-            <option value="AM">AMAZONAS</option>
+          <select {...register('stateId')}>
+            <option value="" selected>
+              Defina o estado...
+            </option>
+            {states?.map((state) => {
+              return (
+                <option key={state.id} value={state.id}>
+                  {state.name}
+                </option>
+              )
+            })}
           </select>
 
-          <select>
-            <option defaultValue="">Defina um tribunal...</option>
-            <option value="">TJMA - 1° GRAU</option>
-            <option value="">TJMA - 2° GRAU</option>
-            <option value="">TRT16 - 1° GRAU</option>
+          <select {...register('url')}>
+            <option value="">Defina o tribunal...</option>
+            {courts.map((court) => {
+              return (
+                <option key={court.id} value={court.url}>
+                  {court.name}
+                </option>
+              )
+            })}
           </select>
         </ContentOptions>
-        <Button>
-          <Text as="strong" size="lg">
-            Acessar Tribunal
-          </Text>
+        <Button type="button" onClick={handleAccessTribunal}>
+          Acessar Tribunal
         </Button>
       </Content>
     </Container>
