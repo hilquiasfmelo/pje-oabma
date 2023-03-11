@@ -10,6 +10,7 @@ import { Text } from '@/components/Text'
 import { Button } from '@/components/Button'
 import { Container, Content, Header, ContentOptions } from './styles'
 import { Toast } from '@/lib/react-toastify/toasts'
+import { Link } from 'phosphor-react'
 
 interface StatesProps {
   id: string
@@ -111,7 +112,8 @@ export function Pje() {
           </select>
         </ContentOptions>
         <Button type="button" onClick={handleAccessTribunal}>
-          Acessar Tribunal
+          <Link style={{ width: '1.5rem', height: '1.5rem' }} />
+          Acessar tribunal
         </Button>
       </Content>
     </Container>

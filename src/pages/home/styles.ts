@@ -19,19 +19,9 @@ export const Content = styled('div', {
 
 export const ContentPages = styled('div', {
   margin: '$1',
-  padding: '$10',
+  padding: '$2 $2 $10 $2',
   border: '3px solid $blue9',
   borderRadius: '$sm',
   boxShadow:
     'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.9) 0px 3px 7px -3px',
-})
-
-export const ContentOptions = styled('div', {
-  minWidth: 380,
-
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$10',
 })

@@ -20,10 +20,6 @@ export const Header = styled('div', {
   borderRadius: '$sm',
   color: '$gray12',
 
-  '> img': {
-    borderRadius: '$sm',
-  },
-
   [`> ${Text}`]: {
     display: 'flex',
     alignItems: 'center',
@@ -68,8 +64,8 @@ export const ContentOptions = styled('div', {
       background: '#FFF',
       fontWeight: '$bold',
       color: '$gray5',
-      borderRadius: '$sm',
       outline: 0,
+      fontFamily: 'Roboto Slab',
     },
   },
 })

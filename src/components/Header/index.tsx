@@ -9,7 +9,11 @@ export function Header() {
   return (
     <Container>
       <Content>
-        <ContentImage>
+        <ContentImage
+          target="_blank"
+          href={process.env.SITE_OABMA}
+          title="Ir ao site"
+        >
           <Image
             src={oabLogo}
             width={140}
@@ -22,9 +26,9 @@ export function Header() {
           <Text as="strong">MARANHÃO</Text>
         </ContentImage>
 
-        <h1>+500k</h1>
+        <h2>+500k de usuários usando</h2>
 
-        <h1>Sobre</h1>
+        <h3>Sobre</h3>
       </Content>
     </Container>
   )

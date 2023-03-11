@@ -31,8 +31,7 @@ export default async function handler(
 
   if (stateName || stateAcronym) {
     return res.status(400).json({
-      message:
-        'Esse estado ou sigla já está cadastrado, tente outro novamente!',
+      message: 'Estado ou Sigla já está cadastrado!',
     })
   }
 

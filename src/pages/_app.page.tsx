@@ -18,8 +18,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <Header />
       <Component {...pageProps} />
-      <Footer />
       <ToastProvider />
+      <Footer />
     </QueryClientProvider>
   )
 }

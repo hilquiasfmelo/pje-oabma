@@ -14,7 +14,6 @@ export const Container = styled('header', {
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: '$5',
-  margin: '0 $1 ',
   position: 'fixed',
   top: 0,
   left: 0,
@@ -30,12 +29,15 @@ export const Content = styled('div', {
   margin: '0 $10',
 })
 
-export const ContentImage = styled('div', {
+export const ContentImage = styled('a', {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
+  cursor: 'pointer',
+  textDecoration: 'none',
 
   [`> ${Text}`]: {
     marginTop: '-$3',
+    color: '#FFF',
   },
 })

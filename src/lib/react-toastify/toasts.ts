@@ -15,14 +15,13 @@ export function Toast({ message, type }: ToastProps) {
     draggable: true,
     progress: undefined,
     style: {
-      color: '#121214',
-      fontSize: '17px',
+      color: '#FFF',
+      fontSize: '14px',
       boxShadow: 'rgba(0, 0, 0, 0.35) 5px 5px 15px',
       marginTop: '72px',
-      padding: '15px 10px',
-      fontFamily: 'Roboto Slab, sans-serif',
+      fontWeight: 'bold',
     },
-    theme: 'light',
+    theme: 'colored',
     toastId: '',
   }
 

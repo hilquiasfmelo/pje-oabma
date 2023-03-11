@@ -37,30 +37,54 @@ export const Content = styled('div', {
         border: '2px solid $orange9',
       },
     },
+  },
+})
 
-    [`> ${Button}`]: {
-      fontSize: '$md',
+export const ContentOptions = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  justifyContent: 'center',
+  padding: '$3 $4',
+  width: '100%',
+  gap: '$4',
+  outline: 0,
+
+  select: {
+    width: '100%',
+    padding: '$3 $4',
+    borderRadius: '$sm',
+    border: '2px solid $gray11',
+    fontSize: '$md',
+    background: '#FFF',
+    cursor: 'pointer',
+    appearance: 'none',
+    outline: 0,
+
+    '&:focus': {
+      border: '2px solid $orange9',
+    },
+
+    option: {
+      padding: '$5',
+      background: '#FFF',
+      fontWeight: '$bold',
+      color: '$gray5',
+      borderRadius: '$sm',
+      fontFamily: 'Roboto Slab',
+      outline: 0,
     },
   },
 })
 
 export const FormActions = styled('div', {
   display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+  justifyContent: 'flex-end',
   marginTop: '$5',
   padding: '0 $4',
-  width: '100%',
 
   [`> ${Button}`]: {
     fontSize: '$md',
     padding: '$1 $5',
   },
-})
-
-export const SeparationsContent = styled('div', {
-  border: '1px solid $orange9',
-  height: '70vh',
-  borderRadius: '$full',
-  marginTop: '$16',
 })

@@ -4,11 +4,13 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 
-import { Container, Content } from './styles'
+import { Container, Content, SeparationsContent, FormActions } from './styles'
 import { Toast } from '@/lib/react-toastify/toasts'
 import { API } from '@/lib/axios'
 import { AxiosError } from 'axios'
 import { Courts } from './courts'
+import { FloppyDisk } from 'phosphor-react'
+import { useRouter } from 'next/router'
 
 const statesFormSchema = z.object({
   name: z
@@ -38,6 +40,8 @@ export default function States() {
     resolver: zodResolver(statesFormSchema),
   })
 
+  const router = useRouter()
+
   async function handleCreateStates(data: StatesFormData) {
     const { name, acronym } = data
 
@@ -51,6 +55,12 @@ export default function States() {
         type: 'success',
         message: 'Estado cadastrado com sucesso!',
       })
+
+      reset()
+
+      setTimeout(() => {
+        router.reload()
+      }, 3000)
     } catch (err) {
       if (err instanceof AxiosError && err?.response?.data?.message) {
         Toast({
@@ -103,10 +113,15 @@ export default function States() {
             })}
         </label>
 
-        <label>
-          <Button type="submit">Cadastrar</Button>
-        </label>
+        <FormActions>
+          <Button type="submit">
+            <FloppyDisk style={{ width: '1.5rem', height: '1.5rem' }} />
+            Registrar estado
+          </Button>
+        </FormActions>
       </Content>
+
+      <SeparationsContent />
 
       <Courts />
     </Container>

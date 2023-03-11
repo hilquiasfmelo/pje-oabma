@@ -1,8 +1,6 @@
-import { Button } from '@/components/Button'
-import { Text } from '@/components/Text'
 import { Pje } from '../pje'
 
-import { Container, Content, ContentPages, ContentOptions } from './styles'
+import { Container, Content, ContentPages } from './styles'
 
 export default function Home() {
   return (
@@ -11,15 +9,6 @@ export default function Home() {
         <ContentPages>
           <Pje />
         </ContentPages>
-        <ContentOptions>
-          <Button>
-            <Text size="lg">OAB Maranhão</Text>
-          </Button>
-
-          <Button>
-            <Text size="lg">Área Criminal</Text>
-          </Button>
-        </ContentOptions>
       </Content>
     </Container>
   )

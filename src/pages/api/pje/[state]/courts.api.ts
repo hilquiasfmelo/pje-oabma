@@ -45,7 +45,7 @@ export default async function handler(
 
   if (courtsName || courtsUrl) {
     return res.status(400).json({
-      message: 'Court or Url already registered, try another one again.',
+      message: 'Tribunal ou URL já cadastrado, tente outro novamente!',
     })
   }
 
