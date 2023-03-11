@@ -6,6 +6,8 @@ export const Container = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   position: 'relative',
+  justifyContent: 'center',
+  alignItems: 'center',
 })
 
 export const Content = styled('div', {
@@ -16,7 +18,7 @@ export const Content = styled('div', {
 })
 
 export const ContentPages = styled('div', {
-  margin: '$30',
+  margin: '$1',
   padding: '$10',
   border: '3px solid $blue9',
   borderRadius: '$sm',
