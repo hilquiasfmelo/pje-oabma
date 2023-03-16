@@ -4,7 +4,7 @@ import { styled } from '@/styles'
 
 export const Container = styled('div', {
   maxWidth: 780,
-  border: '2px solid $blue7',
+  border: '1px solid $orange9',
   borderRadius: '$sm',
   display: 'flex',
   flexDirection: 'column',

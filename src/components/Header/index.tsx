@@ -1,17 +1,30 @@
-import Image from 'next/image'
+import { useRouter } from 'next/router';
+import { Lock } from 'phosphor-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Container, Content, ContentImage } from './styles'
+import { Text } from '../Text';
+import { Button } from '../Button';
 
-import oabLogo from '@/assets/logo-oabma.png'
-import { Text } from '../Text'
+import {
+  Container,
+  Content,
+  ContentImage,
+  ContentLinks,
+  SeparationsContent,
+} from './styles';
+
+import oabLogo from '@/assets/logo-oabma.png';
 
 export function Header() {
+  const router = useRouter();
+
   return (
     <Container>
       <Content>
         <ContentImage
           target="_blank"
-          href={process.env.SITE_OABMA}
+          href="https://www.oabma.org.br"
           title="Ir ao site"
         >
           <Image
@@ -26,10 +39,23 @@ export function Header() {
           <Text as="strong">MARANHÃO</Text>
         </ContentImage>
 
-        <h5>+500k de usuários usando</h5>
+        <ContentLinks>
+          <Link href="" onClick={() => router.push('/')}>
+            Acessar Pje
+          </Link>
 
-        <h5>Sobre</h5>
+          <SeparationsContent />
+
+          <Link href="" onClick={() => router.push('/')}>
+            Área Criminal
+          </Link>
+        </ContentLinks>
+
+        <Button type="button" onClick={() => router.push('/auth')}>
+          <Lock size={15} />
+          Acesso Restrito
+        </Button>
       </Content>
     </Container>
-  )
+  );
 }

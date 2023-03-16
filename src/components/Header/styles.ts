@@ -1,5 +1,6 @@
-import { styled } from '@/styles'
-import { Text } from '../Text'
+import { styled } from '@/styles';
+import { Button } from '../Button';
+import { Text } from '../Text';
 
 export const Container = styled('header', {
   height: '$16',
@@ -22,7 +23,7 @@ export const Container = styled('header', {
   '@media(min-width: 1369px)': {
     height: '$20',
   },
-})
+});
 
 export const Content = styled('div', {
   display: 'flex',
@@ -30,7 +31,59 @@ export const Content = styled('div', {
   justifyContent: 'space-between',
   width: '100%',
   margin: '0 $10',
-})
+
+  [`> ${Button}`]: {
+    fontSize: '0.85rem',
+    fontWeight: '$regular',
+    padding: '$3 $4',
+
+    '&:hover': {
+      background: '$tomato8',
+      transition: '0.6s',
+    },
+
+    '@media(max-width: 1368px)': {
+      padding: '$2 $3',
+      fontSize: '0.69rem',
+    },
+  },
+});
+
+export const ContentLinks = styled('nav', {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '$3',
+
+  '> a': {
+    all: 'unset',
+    fontSize: '$md',
+    cursor: 'pointer',
+    padding: '$1 $2',
+    borderRadius: '$md',
+
+    display: 'inline-block',
+    position: 'relative',
+    alignItems: 'center',
+
+    '&:hover': {
+      background: '$orange9',
+      transition: '0.6s',
+      border: '1px solid $gray12',
+      boxShadow:
+        'rgba(50, 50, 93, 0.75) 0px 6px 12px -2px, rgba(0, 0, 0, 0.9) 0px 3px 7px -3px',
+    },
+
+    '@media(max-width: 1368px)': {
+      fontSize: '$sm',
+    },
+  },
+});
+
+export const SeparationsContent = styled('div', {
+  border: '1px solid $gray12',
+  height: '1.5rem',
+  borderRadius: '$full',
+});
 
 export const ContentImage = styled('a', {
   display: 'flex',
@@ -43,4 +96,4 @@ export const ContentImage = styled('a', {
     marginTop: '-$3',
     color: '#FFF',
   },
-})
+});
