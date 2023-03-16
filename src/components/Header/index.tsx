@@ -16,8 +16,8 @@ export function Header() {
         >
           <Image
             src={oabLogo}
-            width={140}
-            height={60}
+            width={90}
+            height={40}
             quality={100}
             priority
             alt="Logo Pje"
@@ -26,9 +26,9 @@ export function Header() {
           <Text as="strong">MARANHÃO</Text>
         </ContentImage>
 
-        <h2>+500k de usuários usando</h2>
+        <h5>+500k de usuários usando</h5>
 
-        <h3>Sobre</h3>
+        <h5>Sobre</h5>
       </Content>
     </Container>
   )

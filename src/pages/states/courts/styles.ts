@@ -6,16 +6,14 @@ export const Container = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  height: '100vh',
-  gap: '$40',
   position: 'relative',
 })
 
 export const Content = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  width: 480,
-  padding: '$4 $2',
+  width: 380,
+  padding: '0 $2 $4',
   border: '2px solid $blue7',
   borderRadius: '$sm',
   boxShadow:
@@ -24,18 +22,32 @@ export const Content = styled('div', {
   label: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '$3 $4',
+    padding: '$2 $4',
     gap: '$2',
 
     input: {
-      fontSize: '$md',
-      padding: '$3 $4',
+      fontSize: '$sm',
+      padding: '$2 $2',
       border: '2px solid $gray11',
       borderRadius: '$sm',
 
       '&:focus': {
         border: '2px solid $orange9',
       },
+    },
+  },
+
+  '@media(min-width: 1369px)': {
+    width: 430,
+    padding: '$4 $2',
+
+    label: {
+      padding: '$3 $4',
+    },
+
+    input: {
+      fontSize: '$md',
+      padding: '$3 $4',
     },
   },
 })
@@ -46,19 +58,15 @@ export const ContentOptions = styled('div', {
   alignItems: 'flex-start',
   justifyContent: 'center',
   padding: '$3 $4',
-  width: '100%',
-  gap: '$4',
-  outline: 0,
+  gap: '$3',
 
   select: {
-    width: '100%',
-    padding: '$3 $4',
+    padding: '$2 $4',
     borderRadius: '$sm',
     border: '2px solid $gray11',
-    fontSize: '$md',
+    fontSize: '$sm',
     background: '#FFF',
     cursor: 'pointer',
-    appearance: 'none',
     outline: 0,
 
     '&:focus': {
@@ -75,6 +83,12 @@ export const ContentOptions = styled('div', {
       outline: 0,
     },
   },
+
+  '@media(min-width: 1369px)': {
+    select: {
+      padding: '$3 $4',
+    },
+  },
 })
 
 export const FormActions = styled('div', {
@@ -84,7 +98,7 @@ export const FormActions = styled('div', {
   padding: '0 $4',
 
   [`> ${Button}`]: {
-    fontSize: '$md',
-    padding: '$1 $5',
+    fontSize: '$sm',
+    padding: '$2 $5',
   },
 })

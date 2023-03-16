@@ -2,8 +2,7 @@ import { styled } from '@/styles'
 import { Text } from '../Text'
 
 export const Container = styled('header', {
-  maxWidth: '100%',
-  height: '$30',
+  height: '$16',
   color: '$gray12',
   background: '$blue5',
   borderBottom: '1px solid $gray12',
@@ -13,12 +12,16 @@ export const Container = styled('header', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '$5',
+  padding: '$8',
   position: 'fixed',
   top: 0,
   left: 0,
   right: 0,
   zIndex: 1,
+
+  '@media(min-width: 1369px)': {
+    height: '$20',
+  },
 })
 
 export const Content = styled('div', {

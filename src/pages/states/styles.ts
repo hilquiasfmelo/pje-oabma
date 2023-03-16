@@ -7,15 +7,19 @@ export const Container = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   height: '100vh',
-  gap: '$40',
+  gap: '$20',
   position: 'relative',
+
+  '@media(min-width: 1369px)': {
+    gap: '$30',
+  },
 })
 
 export const Content = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  width: 480,
-  padding: '$4 $2',
+  width: 320,
+  padding: '0 $2 $4',
   border: '2px solid $blue7',
   borderRadius: '$sm',
   boxShadow:
@@ -24,12 +28,12 @@ export const Content = styled('div', {
   label: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '$3 $4',
+    padding: '$2 $4',
     gap: '$2',
 
     input: {
-      fontSize: '$md',
-      padding: '$3 $4',
+      fontSize: '$sm',
+      padding: '$2 $2',
       border: '2px solid $gray11',
       borderRadius: '$sm',
 
@@ -37,9 +41,19 @@ export const Content = styled('div', {
         border: '2px solid $orange9',
       },
     },
+  },
 
-    [`> ${Button}`]: {
+  '@media(min-width: 1369px)': {
+    width: 430,
+    padding: '$4 $2',
+
+    label: {
+      padding: '$3 $4',
+    },
+
+    input: {
       fontSize: '$md',
+      padding: '$3 $4',
     },
   },
 })
@@ -49,12 +63,10 @@ export const FormActions = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   marginTop: '$5',
-  padding: '0 $4',
-  width: '100%',
 
   [`> ${Button}`]: {
-    fontSize: '$md',
-    padding: '$1 $5',
+    fontSize: '$sm',
+    padding: '$2 $5',
   },
 })
 

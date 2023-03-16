@@ -1,15 +1,17 @@
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
 import { Pje } from '../pje'
 
-import { Container, Content, ContentPages } from './styles'
+import { Container } from './styles'
 
 export default function Home() {
   return (
-    <Container>
-      <Content>
-        <ContentPages>
-          <Pje />
-        </ContentPages>
-      </Content>
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <Pje />
+      </Container>
+      <Footer />
+    </>
   )
 }

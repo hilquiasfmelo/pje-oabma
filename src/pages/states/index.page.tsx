@@ -11,6 +11,8 @@ import { AxiosError } from 'axios'
 import { Courts } from './courts'
 import { FloppyDisk } from 'phosphor-react'
 import { useRouter } from 'next/router'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 const statesFormSchema = z.object({
   name: z
@@ -79,51 +81,55 @@ export default function States() {
   }
 
   return (
-    <Container>
-      <Content as="form" onSubmit={handleSubmit(handleCreateStates)}>
-        <label>
-          <Text as="strong">Nome do Estado</Text>
-          <input
-            type="text"
-            placeholder="Digite o nome do estado"
-            {...register('name')}
-            required
-          />
+    <>
+      <Header />
+      <Container>
+        <Content as="form" onSubmit={handleSubmit(handleCreateStates)}>
+          <label>
+            <Text as="strong">Nome do Estado</Text>
+            <input
+              type="text"
+              placeholder="Digite o nome do estado"
+              {...register('name')}
+              required
+            />
 
-          {errors.name &&
-            Toast({
-              type: 'error',
-              message: String(errors.name.message),
-            })}
-        </label>
+            {errors.name &&
+              Toast({
+                type: 'error',
+                message: String(errors.name.message),
+              })}
+          </label>
 
-        <label>
-          <Text as="strong">Sigla do Estado</Text>
-          <input
-            type="text"
-            placeholder="Digite o nome do estado"
-            {...register('acronym')}
-            required
-          />
+          <label>
+            <Text as="strong">Sigla do Estado</Text>
+            <input
+              type="text"
+              placeholder="Digite o nome do estado"
+              {...register('acronym')}
+              required
+            />
 
-          {errors.acronym &&
-            Toast({
-              type: 'error',
-              message: String(errors.acronym.message),
-            })}
-        </label>
+            {errors.acronym &&
+              Toast({
+                type: 'error',
+                message: String(errors.acronym.message),
+              })}
+          </label>
 
-        <FormActions>
-          <Button type="submit">
-            <FloppyDisk style={{ width: '1.5rem', height: '1.5rem' }} />
-            Registrar estado
-          </Button>
-        </FormActions>
-      </Content>
+          <FormActions>
+            <Button type="submit">
+              <FloppyDisk size={20} />
+              Registrar estado
+            </Button>
+          </FormActions>
+        </Content>
 
-      <SeparationsContent />
+        <SeparationsContent />
 
-      <Courts />
-    </Container>
+        <Courts />
+      </Container>
+      <Footer />
+    </>
   )
 }

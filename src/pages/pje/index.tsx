@@ -69,20 +69,20 @@ export function Pje() {
       <Header>
         <Image
           src={pjeLogo}
-          width={140}
-          height={120}
+          width={120}
+          height={100}
           priority
           quality={100}
           alt="Logo do Direito"
         />
-        <Text as="strong" size="5xl">
+        <Text as="strong">
           O PJE está disponível em todo o Brasil, fique a vontade para usá-lo em
           qualquer estado!
         </Text>
       </Header>
 
       <Content>
-        <Text as="span" size="2xl">
+        <Text as="span" size="lg">
           Escolha qual <strong>Estado</strong> e <strong>Tribunal</strong> você
           deseja acessar:
         </Text>
@@ -101,7 +101,7 @@ export function Pje() {
           </select>
 
           <select {...register('url')} defaultValue="">
-            <option>Defina o tribunal...</option>
+            <option>Selecione um tribunal...</option>
             {courts.map((court) => {
               return (
                 <option key={court.id} value={court.url}>
@@ -112,7 +112,7 @@ export function Pje() {
           </select>
         </ContentOptions>
         <Button type="button" onClick={handleAccessTribunal}>
-          <Link style={{ width: '1.5rem', height: '1.5rem' }} />
+          <Link size={20} />
           Acessar tribunal
         </Button>
       </Content>

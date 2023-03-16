@@ -3,68 +3,74 @@ import { Text } from '@/components/Text'
 import { styled } from '@/styles'
 
 export const Container = styled('div', {
-  maxWidth: 1020,
+  maxWidth: 780,
+  border: '2px solid $blue7',
+  borderRadius: '$sm',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
   justifyContent: 'center',
-  gap: '$16',
+  margin: '0 auto',
+  padding: '0 0 $16',
+  gap: '$4',
+  boxShadow:
+    'rgba(50, 50, 93, 0.75) 0px 6px 12px -2px, rgba(0, 0, 0, 0.9) 0px 3px 7px -3px',
 })
 
 export const Header = styled('div', {
+  width: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   background: '$orange9',
-  padding: '$10',
-  borderRadius: '$sm',
+  borderTopLeftRadius: '$sm',
   color: '$gray12',
+  marginBottom: '$8',
+
+  '> img': {
+    borderTopLeftRadius: '$sm',
+  },
 
   [`> ${Text}`]: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
     textAlign: 'center',
+    padding: '0 $4',
   },
 })
 
 export const Content = styled('div', {
+  width: '100%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  gap: '$10',
+  gap: '$4',
 
   [`> ${Button}`]: {
-    width: '$64',
-    padding: '$2',
+    marginTop: '$4',
   },
 })
 
 export const ContentOptions = styled('div', {
+  width: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '$4',
-  outline: 0,
+  gap: '$3',
 
   select: {
-    width: '$64',
-    padding: '$5',
+    padding: '$2 $5',
     borderRadius: '$sm',
     border: '2px solid $orange9',
-    fontSize: '$lg',
+    fontSize: '$sm',
     color: '$gray1',
     background: '#FFF',
     cursor: 'pointer',
-    appearance: 'none',
-    outline: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
 
     option: {
-      padding: '$5',
       background: '#FFF',
-      fontWeight: '$bold',
       color: '$gray5',
-      outline: 0,
       fontFamily: 'Roboto Slab',
     },
   },
