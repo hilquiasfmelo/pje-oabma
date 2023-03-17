@@ -52,29 +52,32 @@ export const Content = styled('div', {
 export const ContentLinks = styled('nav', {
   display: 'flex',
   alignItems: 'center',
-  gap: '$3',
+  padding: '$5 $20',
+  gap: '$4',
 
   '> a': {
     all: 'unset',
     fontSize: '$md',
     cursor: 'pointer',
     padding: '$1 $2',
-    borderRadius: '$md',
+    borderRadius: '$sm',
 
     display: 'inline-block',
     position: 'relative',
     alignItems: 'center',
 
     '&:hover': {
-      background: '$orange9',
-      transition: '0.6s',
-      border: '1px solid $gray12',
-      boxShadow:
-        'rgba(50, 50, 93, 0.75) 0px 6px 12px -2px, rgba(0, 0, 0, 0.9) 0px 3px 7px -3px',
+      color: '$orange9',
+      borderBottom: '1px solid $gray12',
+      fontSize: '1.1rem',
     },
 
     '@media(max-width: 1368px)': {
-      fontSize: '$sm',
+      fontSize: '0.75rem',
+
+      '&:hover': {
+        fontSize: '0.85rem',
+      },
     },
   },
 });
