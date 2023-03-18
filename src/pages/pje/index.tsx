@@ -10,7 +10,7 @@ import { Text } from '@/components/Text'
 import { Button } from '@/components/Button'
 import { Container, Content, Header, ContentOptions } from './styles'
 import { Toast } from '@/lib/react-toastify/toasts'
-import { Link } from 'phosphor-react'
+import { Globe } from 'phosphor-react'
 
 interface StatesProps {
   id: string
@@ -112,7 +112,7 @@ export function Pje() {
           </select>
         </ContentOptions>
         <Button type="button" onClick={handleAccessTribunal}>
-          <Link size={20} />
+          <Globe size={20} />
           Acessar tribunal
         </Button>
       </Content>

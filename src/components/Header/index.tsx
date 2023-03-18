@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router';
-import { Lock } from 'phosphor-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useRouter } from 'next/router'
+import { Lock } from 'phosphor-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { Text } from '../Text';
-import { Button } from '../Button';
+import { Text } from '../Text'
+import { Button } from '../Button'
 
 import {
   Container,
@@ -12,12 +12,12 @@ import {
   ContentImage,
   ContentLinks,
   SeparationsContent,
-} from './styles';
+} from './styles'
 
-import oabLogo from '@/assets/logo-oabma.png';
+import oabLogo from '@/assets/logo-oabma.png'
 
 export function Header() {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <Container>
@@ -57,5 +57,5 @@ export function Header() {
         </Button>
       </Content>
     </Container>
-  );
+  )
 }

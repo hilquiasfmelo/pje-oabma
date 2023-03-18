@@ -1,6 +1,7 @@
-import Image from 'next/image';
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { Text } from '../Text';
+import { Text } from '../Text'
 
 import {
   About,
@@ -9,16 +10,24 @@ import {
   ContentImage,
   ContentPrimary,
   ProgramsLinks,
-} from './styles';
+} from './styles'
 
-import oabLogo from '@/assets/logo-oabma.png';
 import {
   ArrowElbowDownRight,
   Envelope,
-  Link,
+  Link as IconLink,
   MapPinLine,
   Phone,
-} from 'phosphor-react';
+} from 'phosphor-react'
+
+import {
+  LINK_CERTISIGN,
+  LINK_JAVA,
+  LINK_PJE,
+  LINK_SAFESIGN,
+} from '@/utils/links-downloads'
+
+import oabLogo from '@/assets/logo-oabma.png'
 
 export function Footer() {
   return (
@@ -41,32 +50,25 @@ export function Footer() {
           <ArrowElbowDownRight size={25} />
           Links para download dos programas para usar o PJE <br />
           Atenção: Disponível somente para sistemas com arquitetura x64. <br />
-          Sistema Operacional: Windows
         </span>
 
         <ProgramsLinks>
-          <dd
-            onClick={() =>
-              window.location.assign(
-                'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=247947_0ae14417abb444ebb02b9815e2103550'
-              )
-            }
-          >
-            <Link size={20} />
+          <Link href={LINK_JAVA}>
+            <IconLink size={20} />
             Download Java SE
-          </dd>
-          <dd>
-            <Link size={20} />
-            Driver GB SafeSign
-          </dd>
-          <dd>
-            <Link size={20} />
+          </Link>
+          <Link href={LINK_SAFESIGN}>
+            <IconLink size={20} />
+            Driver Token GD-Safesign
+          </Link>
+          <Link href={LINK_CERTISIGN}>
+            <IconLink size={20} />
             Driver Token Certisign
-          </dd>
-          <dd>
-            <Link size={20} />
+          </Link>
+          <Link href={LINK_PJE}>
+            <IconLink size={20} />
             Assinador PjeOffice
-          </dd>
+          </Link>
         </ProgramsLinks>
       </ContentPrimary>
 
@@ -74,8 +76,8 @@ export function Footer() {
         <div>
           <MapPinLine />
           <Text as="span">
-            Rua Dr. Pedro Emanoel de Oliveira, <br /> Nº01 - CEP 65076-908 -
-            Calhau - São Luís, MA - Brasil
+            Rua Dr. Pedro Emanoel de Oliveira, Nº01 <br />
+            CEP 65076-908 - Calhau - São Luís, MA - Brasil
           </Text>
         </div>
 
@@ -100,5 +102,5 @@ export function Footer() {
         </h5>
       </About>
     </Container>
-  );
+  )
 }

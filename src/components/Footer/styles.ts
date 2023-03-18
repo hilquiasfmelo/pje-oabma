@@ -1,6 +1,6 @@
-import { styled } from '@/styles';
+import { styled } from '@/styles'
 
-import { Text } from '../Text';
+import { Text } from '../Text'
 
 export const Container = styled('footer', {
   height: '$64',
@@ -18,7 +18,7 @@ export const Container = styled('footer', {
     height: '17rem',
     padding: '$7 $10 $5',
   },
-});
+})
 
 export const ContentPrimary = styled('section', {
   display: 'flex',
@@ -38,20 +38,22 @@ export const ContentPrimary = styled('section', {
       display: 'flex',
     },
   },
-});
+})
 
-export const ProgramsLinks = styled('div', {
-  marginTop: '$4',
+export const ProgramsLinks = styled('section', {
+  marginTop: '$3',
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   placeItems: 'flex-start',
   width: '100%',
   gap: '$2',
 
-  dd: {
+  '>a': {
+    all: 'unset',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    fontWeight: '$bold',
     gap: '$1',
     marginTop: '$3',
     cursor: 'pointer',
@@ -60,7 +62,7 @@ export const ProgramsLinks = styled('div', {
       color: '$orange9',
     },
   },
-});
+})
 
 export const ContentImage = styled('a', {
   display: 'flex',
@@ -75,28 +77,29 @@ export const ContentImage = styled('a', {
     color: '#FFF',
     fontSize: '$xs',
   },
-});
+})
 
 export const Contacts = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
   justifyContent: 'center',
-  gap: '$2',
+  marginTop: '$10',
+  gap: '$6',
   width: 400,
 
   '> div': {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '$4',
+    gap: '$2',
 
     svg: {
-      fontSize: 30,
+      fontSize: 25,
     },
 
     [`> ${Text}`]: {
-      fontSize: '$sm',
+      fontSize: '$xs',
     },
 
     '@media(max-width: 1368px)': {
@@ -109,7 +112,7 @@ export const Contacts = styled('div', {
       },
     },
   },
-});
+})
 
 export const About = styled('div', {
   display: 'flex',
@@ -117,4 +120,4 @@ export const About = styled('div', {
   alignItems: 'flex-start',
   justifyContent: 'center',
   width: 400,
-});
+})

@@ -1,6 +1,6 @@
-import { styled } from '@/styles';
-import { Button } from '../Button';
-import { Text } from '../Text';
+import { styled } from '@/styles'
+import { Button } from '../Button'
+import { Text } from '../Text'
 
 export const Container = styled('header', {
   height: '$16',
@@ -23,7 +23,7 @@ export const Container = styled('header', {
   '@media(min-width: 1369px)': {
     height: '$20',
   },
-});
+})
 
 export const Content = styled('div', {
   display: 'flex',
@@ -47,7 +47,7 @@ export const Content = styled('div', {
       fontSize: '0.69rem',
     },
   },
-});
+})
 
 export const ContentLinks = styled('nav', {
   display: 'flex',
@@ -80,13 +80,13 @@ export const ContentLinks = styled('nav', {
       },
     },
   },
-});
+})
 
 export const SeparationsContent = styled('div', {
   border: '1px solid $gray12',
   height: '1.5rem',
   borderRadius: '$full',
-});
+})
 
 export const ContentImage = styled('a', {
   display: 'flex',
@@ -99,4 +99,4 @@ export const ContentImage = styled('a', {
     marginTop: '-$3',
     color: '#FFF',
   },
-});
+})
