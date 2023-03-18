@@ -3,6 +3,7 @@ import { styled } from '@/styles'
 import { Text } from '../Text'
 
 export const Container = styled('footer', {
+  width: '100%',
   height: '$64',
   background: '$tomato8',
   color: '$gray12',
@@ -20,9 +21,10 @@ export const Container = styled('footer', {
   },
 
   '@media(max-width: 425px)': {
-    width: 690,
-    height: '$64',
-    position: 'absolute',
+    flexDirection: 'row-reverse',
+    width: '50rem',
+    height: '20rem',
+    padding: '$4 $10',
   },
 })
 
@@ -43,6 +45,10 @@ export const ContentLinks = styled('section', {
     '@media(max-width: 1368px)': {
       fontSize: '0.78rem',
     },
+  },
+
+  '@media(max-width: 425px)': {
+    display: 'none',
   },
 })
 
@@ -123,6 +129,17 @@ export const Contacts = styled('div', {
         fontSize: '0.78rem',
       },
     },
+
+    '@media(max-width: 425px)': {
+      svg: {
+        fontSize: 30,
+      },
+    },
+  },
+
+  '@media(max-width: 425px)': {
+    width: '100%',
+    gap: '$3',
   },
 })
 
@@ -141,6 +158,10 @@ export const About = styled('div', {
     marginTop: '$3',
     textAlign: 'justify',
     lineHeight: '$base',
-    fontSize: '0.85rem',
+    fontSize: '0.86rem',
+  },
+
+  '@media(max-width: 425px)': {
+    width: '100%',
   },
 })

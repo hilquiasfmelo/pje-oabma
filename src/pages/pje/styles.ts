@@ -3,7 +3,7 @@ import { Text } from '@/components/Text'
 import { styled } from '@/styles'
 
 export const Container = styled('div', {
-  maxWidth: 780,
+  maxWidth: 880,
   border: '1px solid $orange9',
   borderRadius: '$sm',
   display: 'flex',
@@ -14,6 +14,10 @@ export const Container = styled('div', {
   gap: '$4',
   boxShadow:
     'rgba(50, 50, 93, 0.75) 0px 6px 12px -2px, rgba(0, 0, 0, 0.9) 0px 3px 7px -3px',
+
+  '@media(max-width: 425px)': {
+    padding: '0 6rem 2rem',
+  },
 })
 
 export const Header = styled('div', {
@@ -31,9 +35,24 @@ export const Header = styled('div', {
   },
 
   [`> ${Text}`]: {
+    width: '100%',
     display: 'flex',
+    alignItems: 'center',
     textAlign: 'center',
     padding: '0 $4',
+  },
+
+  '@media(max-width: 425px)': {
+    width: '120vw',
+    height: '6.2rem',
+
+    '> img': {
+      margin: 0,
+    },
+
+    [`> ${Text}`]: {
+      fontSize: '$md',
+    },
   },
 })
 
@@ -46,6 +65,13 @@ export const Content = styled('div', {
 
   [`> ${Button}`]: {
     marginTop: '$4',
+  },
+
+  '@media(max-width: 425px)': {
+    [`> ${Button}`]: {
+      padding: '$5 $6',
+      fontSize: '$md',
+    },
   },
 })
 
@@ -72,6 +98,18 @@ export const ContentOptions = styled('div', {
       background: '#FFF',
       color: '$gray5',
       fontFamily: 'Roboto Slab',
+    },
+  },
+
+  '@media(max-width: 425px)': {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '$5',
+
+    select: {
+      padding: '$3 $5',
+      fontWeight: '$bold',
+      fontSize: '$sm',
     },
   },
 })

@@ -95,12 +95,12 @@ export function Footer() {
       <About>
         <strong>Sobre este site</strong>
         <span>
-          Desenvolvido pelo Setor de Tecnologia da Informação da OAB-MA para
-          ajudar os advogados a acessarem rapidamente todos os tribunais com
-          acesso ao PJE disponível em todo o Brasil. Somos uma centralização de
-          LINKS para os sites dos tribunais e não nos responsabilizamos por
-          LINKS de tribunais offline. Qualquer problema deve ser resolvido
-          diretamente com o tribunal em questão.
+          Desenvolvido pelo setor de tecnologia da informação da OAB-MA para
+          ajudar os advogados a acessarem rapidamente os tribunais com acesso ao
+          PJE em todo o Brasil. Eles fornecem links para os sites dos tribunais,
+          mas não são responsáveis por links de tribunais offline. Qualquer
+          problema com o acesso deve ser resolvido diretamente com o tribunal em
+          questão.
         </span>
       </About>
     </Container>

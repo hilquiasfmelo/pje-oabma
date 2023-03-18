@@ -95,6 +95,10 @@ export const ContentLinks = styled('nav', {
 
   '@media(max-width: 425px)': {
     padding: '$5 $5',
+
+    '> a': {
+      fontSize: '$md',
+    },
   },
 })
 
