@@ -23,6 +23,10 @@ export const Container = styled('header', {
   '@media(min-width: 1369px)': {
     height: '$20',
   },
+
+  '@media(max-width: 425px)': {
+    height: '$20',
+  },
 })
 
 export const Content = styled('div', {
@@ -45,6 +49,14 @@ export const Content = styled('div', {
     '@media(max-width: 1368px)': {
       padding: '$2 $3',
       fontSize: '0.69rem',
+    },
+  },
+
+  '@media(max-width: 425px)': {
+    height: '$20',
+
+    [`> ${Button}`]: {
+      display: 'none',
     },
   },
 })
@@ -79,6 +91,10 @@ export const ContentLinks = styled('nav', {
         fontSize: '0.85rem',
       },
     },
+  },
+
+  '@media(max-width: 425px)': {
+    padding: '$5 $5',
   },
 })
 

@@ -18,6 +18,12 @@ export const Container = styled('footer', {
     height: '17rem',
     padding: '$7 $10 $5',
   },
+
+  '@media(max-width: 425px)': {
+    width: 690,
+    height: '$64',
+    position: 'absolute',
+  },
 })
 
 export const ContentLinks = styled('section', {

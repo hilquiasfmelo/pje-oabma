@@ -1,13 +1,34 @@
 import { styled } from '@/styles'
 
 export const Container = styled('div', {
-  width: '0 auto',
-  height: '40rem',
+  maxWidth: '100%',
   display: 'flex',
-  flexDirection: 'column',
+  alignItems: 'center',
   justifyContent: 'center',
+  height: '100vh',
+  position: 'relative',
 
-  '@media(min-width: 1369px)': {
-    height: '45rem',
+  '@media(max-width: 425px)': {
+    margin: '10rem 8rem',
+    justifyContent: 'flex-start',
+    minHeight: 'calc(100vh - 100px)',
+  },
+
+  '@media(max-width: 414px)': {
+    margin: '11rem 8rem',
+    justifyContent: 'flex-start',
+    minHeight: 'calc(100vh - 100px)',
+  },
+
+  '@media(max-width: 390px)': {
+    margin: '12.5rem 8rem',
+    justifyContent: 'flex-start',
+    minHeight: 'calc(100vh - 100px)',
+  },
+
+  '@media(max-width: 360px)': {
+    margin: '13.5rem 8rem',
+    justifyContent: 'flex-start',
+    minHeight: 'calc(100vh - 100px)',
   },
 })
