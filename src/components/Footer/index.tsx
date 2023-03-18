@@ -8,7 +8,7 @@ import {
   Contacts,
   Container,
   ContentImage,
-  ContentPrimary,
+  ContentLinks,
   ProgramsLinks,
 } from './styles'
 
@@ -25,14 +25,14 @@ import {
   LINK_JAVA,
   LINK_PJE,
   LINK_SAFESIGN,
-} from '@/utils/links-downloads'
+} from '@/utils/links-download'
 
 import oabLogo from '@/assets/logo-oabma.png'
 
 export function Footer() {
   return (
     <Container>
-      <ContentPrimary>
+      <ContentLinks>
         <ContentImage>
           <Image
             src={oabLogo}
@@ -70,7 +70,7 @@ export function Footer() {
             Assinador PjeOffice
           </Link>
         </ProgramsLinks>
-      </ContentPrimary>
+      </ContentLinks>
 
       <Contacts>
         <div>
@@ -93,13 +93,15 @@ export function Footer() {
       </Contacts>
 
       <About>
-        <h3>Sobre</h3>
-        <h5>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
-          laboriosam earum magni? Iste commodi unde sapiente quisquam voluptate
-          error. Cumque odio soluta qui quae nam id voluptatem, minima
-          accusantium asperiores!
-        </h5>
+        <strong>Sobre este site</strong>
+        <span>
+          Desenvolvido pelo Setor de Tecnologia da Informação da OAB-MA para
+          ajudar os advogados a acessarem rapidamente todos os tribunais com
+          acesso ao PJE disponível em todo o Brasil. Somos uma centralização de
+          LINKS para os sites dos tribunais e não nos responsabilizamos por
+          LINKS de tribunais offline. Qualquer problema deve ser resolvido
+          diretamente com o tribunal em questão.
+        </span>
       </About>
     </Container>
   )

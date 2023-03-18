@@ -10,7 +10,7 @@ export const Container = styled('footer', {
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: '0 $20',
-  fontSize: '$xs',
+  fontSize: '$sm',
   clipPath:
     'polygon(0 0, 20% 30px, 40% 0, 60% 30px, 80% 0, 100% 30px, 100% 100%, 0 100%)',
 
@@ -20,7 +20,7 @@ export const Container = styled('footer', {
   },
 })
 
-export const ContentPrimary = styled('section', {
+export const ContentLinks = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
@@ -34,8 +34,8 @@ export const ContentPrimary = styled('section', {
     gap: '$2',
     fontWeight: '$regular',
 
-    '> strong': {
-      display: 'flex',
+    '@media(max-width: 1368px)': {
+      fontSize: '0.78rem',
     },
   },
 })
@@ -46,21 +46,25 @@ export const ProgramsLinks = styled('section', {
   gridTemplateColumns: '1fr 1fr',
   placeItems: 'flex-start',
   width: '100%',
-  gap: '$2',
 
-  '>a': {
+  '> a': {
     all: 'unset',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: '$bold',
     gap: '$1',
-    marginTop: '$3',
+    marginTop: '$2',
     cursor: 'pointer',
+    fontSize: '0.85rem',
 
     '&:hover': {
       color: '$orange9',
     },
+  },
+
+  '@media(max-width: 1368px)': {
+    fontSize: '0.78rem',
   },
 })
 
@@ -99,16 +103,18 @@ export const Contacts = styled('div', {
     },
 
     [`> ${Text}`]: {
-      fontSize: '$xs',
+      fontSize: '$sm',
     },
 
     '@media(max-width: 1368px)': {
+      padding: '0 $12',
+
       '> svg': {
         fontSize: '1.5rem',
       },
 
       [`> ${Text}`]: {
-        fontSize: '$xs',
+        fontSize: '0.78rem',
       },
     },
   },
@@ -120,4 +126,15 @@ export const About = styled('div', {
   alignItems: 'flex-start',
   justifyContent: 'center',
   width: 400,
+
+  '> strong': {
+    fontSize: '$md',
+  },
+
+  '> span': {
+    marginTop: '$3',
+    textAlign: 'justify',
+    lineHeight: '$base',
+    fontSize: '0.85rem',
+  },
 })

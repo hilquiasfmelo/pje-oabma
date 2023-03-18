@@ -31,3 +31,11 @@ model Courts {
 
   @@map("courts")
 }
+
+model AccessRestricted {
+  id         String   @id @default(uuid())
+  code       String   @unique
+  created_at DateTime @default(now())
+
+  @@map("access_restricted")
+}

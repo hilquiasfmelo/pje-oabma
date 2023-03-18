@@ -16,17 +16,15 @@ import {
 
 import oabLogo from '@/assets/logo-oabma.png'
 
+import { SITE_OABMA } from '@/utils/links-download'
+
 export function Header() {
   const router = useRouter()
 
   return (
     <Container>
       <Content>
-        <ContentImage
-          target="_blank"
-          href="https://www.oabma.org.br"
-          title="Ir ao site"
-        >
+        <ContentImage target="_blank" href={SITE_OABMA} title="Ir ao site">
           <Image
             src={oabLogo}
             width={90}

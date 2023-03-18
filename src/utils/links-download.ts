@@ -1,3 +1,5 @@
+export const SITE_OABMA = 'https://www.oabma.org.br'
+
 export const LINK_JAVA =
   'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=247947_0ae14417abb444ebb02b9815e2103550'
 
