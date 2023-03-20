@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router'
-import { Lock } from 'phosphor-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/router';
+import { Lock } from 'phosphor-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Text } from '../Text'
-import { Button } from '../Button'
+import { Text } from '../Text';
+import { Button } from '../Button';
 
 import {
   Container,
@@ -12,14 +12,14 @@ import {
   ContentImage,
   ContentLinks,
   SeparationsContent,
-} from './styles'
+} from './styles';
 
-import oabLogo from '@/assets/logo-oabma.png'
+import oabLogo from '@/assets/logo-oabma.png';
 
-import { SITE_OABMA } from '@/utils/links-download'
+import { SITE_OABMA } from '@/utils/links-download';
 
 export function Header() {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <Container>
@@ -38,15 +38,11 @@ export function Header() {
         </ContentImage>
 
         <ContentLinks>
-          <Link href="" onClick={() => router.push('/')}>
-            Acessar Pje
-          </Link>
+          <Link href="/">Acessar Pje</Link>
 
           <SeparationsContent />
 
-          <Link href="" onClick={() => router.push('/')}>
-            Área Criminal
-          </Link>
+          <Link href="/crime-zone">Área Criminal</Link>
         </ContentLinks>
 
         <Button type="button" onClick={() => router.push('/auth')}>
@@ -55,5 +51,5 @@ export function Header() {
         </Button>
       </Content>
     </Container>
-  )
+  );
 }

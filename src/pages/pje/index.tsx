@@ -31,11 +31,6 @@ export function Pje() {
   const stateId: string = watch('stateId');
   const url: string = watch('url');
 
-  console.log({
-    stateId,
-    url,
-  });
-
   const { data: states } = useQuery<StatesProps[]>(['states'], async () => {
     const response = await API.get('/pje/get-states');
 
