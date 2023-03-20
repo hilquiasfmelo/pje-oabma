@@ -1,32 +1,27 @@
-import { Button } from '@/components/Button'
-import { Text } from '@/components/Text'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
+import { Button } from '@/components/Button';
+import { Text } from '@/components/Text';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 
-import { Container, Content, ContentOptions, FormActions } from './styles'
-import { Toast } from '@/lib/react-toastify/toasts'
-import { FloppyDisk } from 'phosphor-react'
-import { useQuery } from '@tanstack/react-query'
-import { API } from '@/lib/axios'
-import { AxiosError } from 'axios'
+import { Container, Content, ContentOptions, FormActions } from './styles';
+import { Toast } from '@/lib/react-toastify/toasts';
+import { FloppyDisk } from 'phosphor-react';
+import { useQuery } from '@tanstack/react-query';
+import { API } from '@/lib/axios';
+import { AxiosError } from 'axios';
 
 const courtsFormSchema = z.object({
-  name: z
-    .string()
-    .toUpperCase()
-    .regex(/^(?=.*[a-zA-Z])\s*\S+$/, {
-      message: 'Não é permitido enviar somente números ou espaços em branco.',
-    }),
+  name: z.string().toUpperCase(),
   url: z.string(),
   stateId: z.string().uuid(),
-})
+});
 
-type CourtsFormData = z.infer<typeof courtsFormSchema>
+type CourtsFormData = z.infer<typeof courtsFormSchema>;
 
 interface StatesProps {
-  id: string
-  name: string
+  id: string;
+  name: string;
 }
 
 export function Courts() {
@@ -38,45 +33,45 @@ export function Courts() {
     formState: { errors },
   } = useForm<CourtsFormData>({
     resolver: zodResolver(courtsFormSchema),
-  })
+  });
 
-  const id: string = watch('stateId')
+  const id: string = watch('stateId');
 
   const { data: states } = useQuery<StatesProps[]>(['states'], async () => {
-    const response = await API.get('/pje/get-states')
+    const response = await API.get('/pje/get-states');
 
-    return response.data
-  })
+    return response.data;
+  });
 
   async function handleCreateCourts(data: CourtsFormData) {
-    const { name, url } = data
+    const { name, url } = data;
 
     try {
       await API.post(`/pje/${id}/courts`, {
         name,
         url,
         stateId: id,
-      })
+      });
 
       Toast({
         type: 'success',
         message: 'Tribunal com a URL do site cadastrado com sucesso!',
-      })
+      });
     } catch (err) {
       if (err instanceof AxiosError && err?.response?.data?.message) {
         Toast({
           type: 'error',
           message: String(err.response.data.message),
-        })
+        });
       }
 
       Toast({
         type: 'error',
         message: 'Não foi possível cadastrar, tente novamente mais tarde!',
-      })
+      });
     }
 
-    reset()
+    reset();
   }
 
   return (
@@ -93,7 +88,7 @@ export function Courts() {
                 <option key={state.id} value={state.id}>
                   {state.name}
                 </option>
-              )
+              );
             })}
           </select>
         </ContentOptions>
@@ -138,5 +133,5 @@ export function Courts() {
         </FormActions>
       </Content>
     </Container>
-  )
+  );
 }

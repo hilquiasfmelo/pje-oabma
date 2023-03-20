@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Text } from '../Text'
+import { Text } from '../Text';
 
 import {
   About,
@@ -10,7 +10,7 @@ import {
   ContentImage,
   ContentLinks,
   ProgramsLinks,
-} from './styles'
+} from './styles';
 
 import {
   ArrowElbowDownRight,
@@ -18,16 +18,16 @@ import {
   Link as IconLink,
   MapPinLine,
   Phone,
-} from 'phosphor-react'
+} from 'phosphor-react';
 
 import {
   LINK_CERTISIGN,
   LINK_JAVA,
   LINK_PJE,
   LINK_SAFESIGN,
-} from '@/utils/links-download'
+} from '@/utils/links-download';
 
-import oabLogo from '@/assets/logo-oabma.png'
+import oabLogo from '@/assets/logo-oabma.png';
 
 export function Footer() {
   return (
@@ -95,14 +95,14 @@ export function Footer() {
       <About>
         <strong>Sobre este site</strong>
         <span>
-          Desenvolvido pelo setor de tecnologia da informação da OAB-MA para
-          ajudar os advogados a acessarem rapidamente os tribunais com acesso ao
-          PJE em todo o Brasil. Eles fornecem links para os sites dos tribunais,
-          mas não são responsáveis por links de tribunais offline. Qualquer
+          Desenvolvido pelo setor de T.I da OAB-MA para ajudar os advogados a
+          acessarem rapidamente os tribunais com acesso ao PJE em todo o Brasil.
+          Nós fornecemos acesso direto aos links para os sites dos tribunais,
+          mas não somos responsáveis por links de tribunais offline. Qualquer
           problema com o acesso deve ser resolvido diretamente com o tribunal em
           questão.
         </span>
       </About>
     </Container>
-  )
+  );
 }
