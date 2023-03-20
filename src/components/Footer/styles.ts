@@ -152,6 +152,9 @@ export const About = styled('div', {
 
   '> strong': {
     fontSize: '$md',
+    borderBottom: '1px solid $gray12',
+    width: '100%',
+    paddingBottom: '$2',
   },
 
   '> span': {

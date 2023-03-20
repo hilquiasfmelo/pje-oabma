@@ -1,18 +1,19 @@
-import { Button } from '@/components/Button'
-import { Text } from '@/components/Text'
+import { FloppyDisk } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { AxiosError } from 'axios'
+import { useRouter } from 'next/router'
 import { z } from 'zod'
 
-import { Container, Content, SeparationsContent, FormActions } from './styles'
-import { Toast } from '@/lib/react-toastify/toasts'
-import { API } from '@/lib/axios'
-import { AxiosError } from 'axios'
-import { Courts } from './courts'
-import { FloppyDisk } from 'phosphor-react'
-import { useRouter } from 'next/router'
+import { Button } from '@/components/Button'
+import { Text } from '@/components/Text'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { Toast } from '@/lib/react-toastify/toasts'
+import { API } from '@/lib/axios'
+import { Courts } from './courts'
+
+import { Container, Content, SeparationsContent, FormActions } from './styles'
 
 const statesFormSchema = z.object({
   name: z

@@ -41,9 +41,8 @@ export const Content = styled('div', {
     fontWeight: '$regular',
     padding: '$3 $4',
 
-    '&:hover': {
-      background: '$tomato8',
-      transition: '0.6s',
+    '&:not(:disabled):hover': {
+      background: '$tomato7',
     },
 
     '@media(max-width: 1368px)': {

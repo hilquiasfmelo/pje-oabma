@@ -1,6 +1,6 @@
-import { Button } from '@/components/Button';
-import { Text } from '@/components/Text';
-import { styled } from '@/styles';
+import { Button } from '@/components/Button'
+import { Text } from '@/components/Text'
+import { styled } from '@/styles'
 
 export const Container = styled('div', {
   maxWidth: 880,
@@ -18,7 +18,7 @@ export const Container = styled('div', {
   '@media(max-width: 425px)': {
     padding: '0 6rem 2rem',
   },
-});
+})
 
 export const Header = styled('div', {
   width: '100%',
@@ -55,7 +55,7 @@ export const Header = styled('div', {
       fontSize: '$md',
     },
   },
-});
+})
 
 export const Content = styled('div', {
   width: '100%',
@@ -74,7 +74,7 @@ export const Content = styled('div', {
       fontSize: '$md',
     },
   },
-});
+})
 
 export const ContentOptions = styled('div', {
   width: '100%',
@@ -113,4 +113,4 @@ export const ContentOptions = styled('div', {
       fontSize: '$sm',
     },
   },
-});
+})

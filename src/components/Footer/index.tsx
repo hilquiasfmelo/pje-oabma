@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { Text } from '../Text';
+import { Text } from '../Text'
 
 import {
   About,
@@ -10,7 +10,7 @@ import {
   ContentImage,
   ContentLinks,
   ProgramsLinks,
-} from './styles';
+} from './styles'
 
 import {
   ArrowElbowDownRight,
@@ -18,16 +18,16 @@ import {
   Link as IconLink,
   MapPinLine,
   Phone,
-} from 'phosphor-react';
+} from 'phosphor-react'
 
 import {
   LINK_CERTISIGN,
   LINK_JAVA,
   LINK_PJE,
   LINK_SAFESIGN,
-} from '@/utils/links-download';
+} from '@/utils/links-download'
 
-import oabLogo from '@/assets/logo-oabma.png';
+import oabLogo from '@/assets/logo-oabma.png'
 
 export function Footer() {
   return (
@@ -104,5 +104,5 @@ export function Footer() {
         </span>
       </About>
     </Container>
-  );
+  )
 }

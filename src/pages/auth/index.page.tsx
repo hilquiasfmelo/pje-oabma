@@ -1,17 +1,18 @@
-import { Button } from '@/components/Button'
-import { Text } from '@/components/Text'
+import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { LockKeyOpen } from 'phosphor-react'
+import { AxiosError } from 'axios'
 import { z } from 'zod'
 
-import { Container, Content, FormActions } from './styles'
-import { Toast } from '@/lib/react-toastify/toasts'
-import { LockKeyOpen } from 'phosphor-react'
-import { API } from '@/lib/axios'
-import { AxiosError } from 'axios'
-import { useRouter } from 'next/router'
+import { Button } from '@/components/Button'
+import { Text } from '@/components/Text'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { Toast } from '@/lib/react-toastify/toasts'
+import { API } from '@/lib/axios'
+
+import { Container, Content, FormActions } from './styles'
 
 const accessFormSchema = z.object({
   code: z.string(),
@@ -81,7 +82,7 @@ export default function States() {
 
           <FormActions>
             <Button type="submit">
-              <LockKeyOpen style={{ width: '1.5rem', height: '1.5rem' }} />
+              <LockKeyOpen size={20} />
               Acessar
             </Button>
           </FormActions>

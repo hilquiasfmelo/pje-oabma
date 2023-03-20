@@ -15,7 +15,7 @@ export const Content = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   width: 480,
-  padding: '$4 $2',
+  padding: '$6 $3',
   border: '2px solid $blue7',
   borderRadius: '$sm',
   boxShadow:
@@ -54,6 +54,6 @@ export const FormActions = styled('div', {
 
   [`> ${Button}`]: {
     fontSize: '$md',
-    padding: '$1 $5',
+    padding: '$3 $6',
   },
 })
