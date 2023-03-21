@@ -7,8 +7,6 @@ import { z } from 'zod'
 
 import { Button } from '@/components/Button'
 import { Text } from '@/components/Text'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
 import { Toast } from '@/lib/react-toastify/toasts'
 import { API } from '@/lib/axios'
 
@@ -60,35 +58,31 @@ export default function States() {
   }
 
   return (
-    <>
-      <Header />
-      <Container>
-        <Content as="form" onSubmit={handleSubmit(handleAccessRestricted)}>
-          <label>
-            <Text as="strong">Código de acesso</Text>
-            <input
-              type="text"
-              placeholder="Digite o código de acesso"
-              {...register('code')}
-              required
-            />
+    <Container>
+      <Content as="form" onSubmit={handleSubmit(handleAccessRestricted)}>
+        <label>
+          <Text as="strong">Código de acesso</Text>
+          <input
+            type="text"
+            placeholder="Digite o código de acesso"
+            {...register('code')}
+            required
+          />
 
-            {errors.code &&
-              Toast({
-                type: 'error',
-                message: String(errors.code.message),
-              })}
-          </label>
+          {errors.code &&
+            Toast({
+              type: 'error',
+              message: String(errors.code.message),
+            })}
+        </label>
 
-          <FormActions>
-            <Button type="submit">
-              <LockKeyOpen size={20} />
-              Acessar
-            </Button>
-          </FormActions>
-        </Content>
-      </Container>
-      <Footer />
-    </>
+        <FormActions>
+          <Button type="submit">
+            <LockKeyOpen size={20} />
+            Acessar
+          </Button>
+        </FormActions>
+      </Content>
+    </Container>
   )
 }

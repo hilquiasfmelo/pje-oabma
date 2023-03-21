@@ -7,8 +7,6 @@ import { z } from 'zod'
 
 import { Button } from '@/components/Button'
 import { Text } from '@/components/Text'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
 import { Toast } from '@/lib/react-toastify/toasts'
 import { API } from '@/lib/axios'
 import { Courts } from './courts'
@@ -82,55 +80,51 @@ export default function States() {
   }
 
   return (
-    <>
-      <Header />
-      <Container>
-        <Content as="form" onSubmit={handleSubmit(handleCreateStates)}>
-          <label>
-            <Text as="strong">Nome do Estado</Text>
-            <input
-              type="text"
-              placeholder="Digite o nome do estado"
-              {...register('name')}
-              required
-            />
+    <Container>
+      <Content as="form" onSubmit={handleSubmit(handleCreateStates)}>
+        <label>
+          <Text as="strong">Nome do Estado</Text>
+          <input
+            type="text"
+            placeholder="Digite o nome do estado"
+            {...register('name')}
+            required
+          />
 
-            {errors.name &&
-              Toast({
-                type: 'error',
-                message: String(errors.name.message),
-              })}
-          </label>
+          {errors.name &&
+            Toast({
+              type: 'error',
+              message: String(errors.name.message),
+            })}
+        </label>
 
-          <label>
-            <Text as="strong">Sigla do Estado</Text>
-            <input
-              type="text"
-              placeholder="Digite o nome do estado"
-              {...register('acronym')}
-              required
-            />
+        <label>
+          <Text as="strong">Sigla do Estado</Text>
+          <input
+            type="text"
+            placeholder="Digite o nome do estado"
+            {...register('acronym')}
+            required
+          />
 
-            {errors.acronym &&
-              Toast({
-                type: 'error',
-                message: String(errors.acronym.message),
-              })}
-          </label>
+          {errors.acronym &&
+            Toast({
+              type: 'error',
+              message: String(errors.acronym.message),
+            })}
+        </label>
 
-          <FormActions>
-            <Button type="submit">
-              <FloppyDisk size={20} />
-              Registrar estado
-            </Button>
-          </FormActions>
-        </Content>
+        <FormActions>
+          <Button type="submit">
+            <FloppyDisk size={20} />
+            Registrar estado
+          </Button>
+        </FormActions>
+      </Content>
 
-        <SeparationsContent />
+      <SeparationsContent />
 
-        <Courts />
-      </Container>
-      <Footer />
-    </>
+      <Courts />
+    </Container>
   )
 }
