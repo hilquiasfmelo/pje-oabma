@@ -1,8 +1,8 @@
-import { Button } from '@/components/Button'
-import { Text } from '@/components/Text'
-import { styled } from '@/styles'
+import { Button } from '@/components/Button';
+import { Text } from '@/components/Text';
+import { styled } from '@/styles';
 
-export const Main = styled('div', {
+export const Container = styled('div', {
   maxWidth: '100%',
   display: 'flex',
   alignItems: 'center',
@@ -15,12 +15,13 @@ export const Main = styled('div', {
     margin: '15rem 25rem',
     height: '100vh',
   },
-})
+});
 
-export const Container = styled('div', {
+export const Content = styled('div', {
   maxWidth: 880,
   border: '1px solid $gray5',
   borderRadius: '$sm',
+  maxHeight: 380,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -33,7 +34,7 @@ export const Container = styled('div', {
   '@media(max-width: 425px)': {
     padding: '0 6rem 2rem',
   },
-})
+});
 
 export const Header = styled('div', {
   width: '100%',
@@ -57,7 +58,7 @@ export const Header = styled('div', {
     alignItems: 'center',
     textAlign: 'center',
     padding: '0 $4',
-    fontSize: '$2xl',
+    fontSize: '$lg',
   },
 
   '@media(max-width: 425px)': {
@@ -72,50 +73,36 @@ export const Header = styled('div', {
       fontSize: '$md',
     },
   },
-})
+});
 
-export const Content = styled('div', {
+export const ContentLinks = styled('div', {
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   gap: '$8',
-
-  [`> ${Button}`]: {
-    marginTop: '$4',
-  },
-
-  '@media(max-width: 425px)': {
-    [`> ${Button}`]: {
-      padding: '$5 $6',
-      fontSize: '$md',
-    },
-  },
-})
+});
 
 export const ContentOptions = styled('div', {
   width: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '$3',
+  gap: '$30',
 
-  select: {
-    padding: '$2 $5',
-    borderRadius: '$sm',
-    border: '2px solid $orange9',
-    fontSize: '$sm',
-    color: '$gray1',
-    background: '#FFF',
-    cursor: 'pointer',
+  '> div': {
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    gap: '$5',
 
-    option: {
-      background: '#FFF',
-      color: '$gray5',
-      fontFamily: 'Roboto Slab',
+    [`> ${Button}`]: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '$3 $10',
+      fontWeight: '$regular',
     },
   },
 
@@ -123,11 +110,5 @@ export const ContentOptions = styled('div', {
     display: 'flex',
     alignItems: 'center',
     gap: '$5',
-
-    select: {
-      padding: '$3 $5',
-      fontWeight: '$bold',
-      fontSize: '$sm',
-    },
   },
-})
+});
