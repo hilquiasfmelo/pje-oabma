@@ -89,9 +89,7 @@ export function Pje() {
         </Text>
         <ContentOptions>
           <select {...register('stateId')} defaultValue="">
-            <option disabled value="">
-              Selecione um estado...
-            </option>
+            <option value="">Selecione um estado...</option>
             {states?.map((state) => {
               return (
                 <option key={state.id} value={state.id}>
@@ -102,9 +100,7 @@ export function Pje() {
           </select>
 
           <select {...register('url')} defaultValue="">
-            <option disabled value="">
-              Selecione um tribunal...
-            </option>
+            <option defaultValue="">Selecione um tribunal...</option>
             {courts.map((court) => {
               return (
                 <option key={court.id} value={court.url}>
