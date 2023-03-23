@@ -20,7 +20,7 @@ export default async function handler(
 
   if (!state) {
     return res.status(404).json({
-      message: 'State not found.',
+      message: 'Estado não encontrado, tente outro novamente!.',
     })
   }
 
@@ -31,21 +31,16 @@ export default async function handler(
 
   const { name, url } = stateBodySchema.parse(req.body)
 
-  const courtsName = await prisma.courts.findFirst({
-    where: {
-      name,
-    },
-  })
-
-  const courtsUrl = await prisma.courts.findUnique({
+  const existingCourt = await prisma.courts.findFirst({
     where: {
       url,
+      states_id: state.id,
     },
   })
 
-  if (courtsName || courtsUrl) {
+  if (existingCourt) {
     return res.status(400).json({
-      message: 'Tribunal ou URL já cadastrado, tente outro novamente!',
+      message: 'URL já está cadastrada para esse estado.',
     })
   }
 

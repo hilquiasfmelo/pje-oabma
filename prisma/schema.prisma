@@ -23,7 +23,7 @@ model States {
 model Courts {
   id         String   @id @default(uuid())
   name       String
-  url        String   @unique
+  url        String
   created_at DateTime @default(now())
   updated_at DateTime @default(now())
 
