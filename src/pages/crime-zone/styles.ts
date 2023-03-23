@@ -1,6 +1,6 @@
-import { Button } from '@/components/Button';
-import { Text } from '@/components/Text';
-import { styled } from '@/styles';
+import { Button } from '@/components/Button'
+import { Text } from '@/components/Text'
+import { styled } from '@/styles'
 
 export const Container = styled('div', {
   maxWidth: '100%',
@@ -15,13 +15,12 @@ export const Container = styled('div', {
     margin: '15rem 25rem',
     height: '100vh',
   },
-});
+})
 
 export const Content = styled('div', {
   maxWidth: 880,
   border: '1px solid $gray5',
   borderRadius: '$sm',
-  maxHeight: 380,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -34,7 +33,7 @@ export const Content = styled('div', {
   '@media(max-width: 425px)': {
     padding: '0 6rem 2rem',
   },
-});
+})
 
 export const Header = styled('div', {
   width: '100%',
@@ -43,9 +42,10 @@ export const Header = styled('div', {
   justifyContent: 'center',
   background: '$gray5',
   borderTopLeftRadius: '$sm',
+  borderTopRightRadius: '$sm',
   color: '$gray12',
-  marginBottom: '$10',
-  padding: '$3',
+  marginBottom: '$8',
+  padding: '$2 0',
 
   '> img': {
     borderTopLeftRadius: '$sm',
@@ -58,7 +58,7 @@ export const Header = styled('div', {
     alignItems: 'center',
     textAlign: 'center',
     padding: '0 $4',
-    fontSize: '$lg',
+    fontSize: '$2xl',
   },
 
   '@media(max-width: 425px)': {
@@ -73,7 +73,7 @@ export const Header = styled('div', {
       fontSize: '$md',
     },
   },
-});
+})
 
 export const ContentLinks = styled('div', {
   width: '100%',
@@ -81,7 +81,7 @@ export const ContentLinks = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   gap: '$8',
-});
+})
 
 export const ContentOptions = styled('div', {
   width: '100%',
@@ -90,7 +90,7 @@ export const ContentOptions = styled('div', {
   justifyContent: 'center',
   gap: '$30',
 
-  '> div': {
+  div: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -101,7 +101,7 @@ export const ContentOptions = styled('div', {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '$3 $10',
+      padding: '$2 $10',
       fontWeight: '$regular',
     },
   },
@@ -111,4 +111,4 @@ export const ContentOptions = styled('div', {
     alignItems: 'center',
     gap: '$5',
   },
-});
+})

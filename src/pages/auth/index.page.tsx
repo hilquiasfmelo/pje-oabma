@@ -11,6 +11,7 @@ import { Toast } from '@/lib/react-toastify/toasts'
 import { API } from '@/lib/axios'
 
 import { Container, Content, FormActions } from './styles'
+import { NextSeo } from 'next-seo'
 
 const accessFormSchema = z.object({
   code: z.string(),
@@ -58,31 +59,35 @@ export default function States() {
   }
 
   return (
-    <Container>
-      <Content as="form" onSubmit={handleSubmit(handleAccessRestricted)}>
-        <label>
-          <Text as="strong">Código de acesso</Text>
-          <input
-            type="text"
-            placeholder="Digite o código de acesso"
-            {...register('code')}
-            required
-          />
+    <>
+      <NextSeo title="Acesso Restrito | Pje OAB-MA" noindex />
 
-          {errors.code &&
-            Toast({
-              type: 'error',
-              message: String(errors.code.message),
-            })}
-        </label>
+      <Container>
+        <Content as="form" onSubmit={handleSubmit(handleAccessRestricted)}>
+          <label>
+            <Text as="strong">Código de acesso</Text>
+            <input
+              type="text"
+              placeholder="Digite o código de acesso"
+              {...register('code')}
+              required
+            />
 
-        <FormActions>
-          <Button type="submit">
-            <LockKeyOpen size={20} />
-            Acessar
-          </Button>
-        </FormActions>
-      </Content>
-    </Container>
+            {errors.code &&
+              Toast({
+                type: 'error',
+                message: String(errors.code.message),
+              })}
+          </label>
+
+          <FormActions>
+            <Button type="submit">
+              <LockKeyOpen size={20} />
+              Acessar
+            </Button>
+          </FormActions>
+        </Content>
+      </Container>
+    </>
   )
 }

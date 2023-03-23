@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model States {
@@ -29,6 +30,7 @@ model Courts {
   state     States @relation(fields: [states_id], references: [id])
   states_id String
 
+  @@index([states_id])
   @@map("courts")
 }
 

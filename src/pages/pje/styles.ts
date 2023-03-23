@@ -27,6 +27,7 @@ export const Header = styled('div', {
   justifyContent: 'center',
   background: '$orange9',
   borderTopLeftRadius: '$sm',
+  borderTopRightRadius: '$sm',
   color: '$gray12',
   marginBottom: '$8',
 

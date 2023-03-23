@@ -12,6 +12,7 @@ import { API } from '@/lib/axios'
 import { Courts } from './courts'
 
 import { Container, Content, SeparationsContent, FormActions } from './styles'
+import { NextSeo } from 'next-seo'
 
 const statesFormSchema = z.object({
   name: z
@@ -80,51 +81,55 @@ export default function States() {
   }
 
   return (
-    <Container>
-      <Content as="form" onSubmit={handleSubmit(handleCreateStates)}>
-        <label>
-          <Text as="strong">Nome do Estado</Text>
-          <input
-            type="text"
-            placeholder="Digite o nome do estado"
-            {...register('name')}
-            required
-          />
+    <>
+      <NextSeo title="Cadastro | Pje OAB-MA" noindex />
 
-          {errors.name &&
-            Toast({
-              type: 'error',
-              message: String(errors.name.message),
-            })}
-        </label>
+      <Container>
+        <Content as="form" onSubmit={handleSubmit(handleCreateStates)}>
+          <label>
+            <Text as="strong">Nome do Estado</Text>
+            <input
+              type="text"
+              placeholder="Digite o nome do estado"
+              {...register('name')}
+              required
+            />
 
-        <label>
-          <Text as="strong">Sigla do Estado</Text>
-          <input
-            type="text"
-            placeholder="Digite o nome do estado"
-            {...register('acronym')}
-            required
-          />
+            {errors.name &&
+              Toast({
+                type: 'error',
+                message: String(errors.name.message),
+              })}
+          </label>
 
-          {errors.acronym &&
-            Toast({
-              type: 'error',
-              message: String(errors.acronym.message),
-            })}
-        </label>
+          <label>
+            <Text as="strong">Sigla do Estado</Text>
+            <input
+              type="text"
+              placeholder="Digite o nome do estado"
+              {...register('acronym')}
+              required
+            />
 
-        <FormActions>
-          <Button type="submit">
-            <FloppyDisk size={20} />
-            Registrar estado
-          </Button>
-        </FormActions>
-      </Content>
+            {errors.acronym &&
+              Toast({
+                type: 'error',
+                message: String(errors.acronym.message),
+              })}
+          </label>
 
-      <SeparationsContent />
+          <FormActions>
+            <Button type="submit">
+              <FloppyDisk size={20} />
+              Registrar estado
+            </Button>
+          </FormActions>
+        </Content>
 
-      <Courts />
-    </Container>
+        <SeparationsContent />
+
+        <Courts />
+      </Container>
+    </>
   )
 }
