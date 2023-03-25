@@ -12,6 +12,7 @@ import { API } from '@/lib/axios'
 
 import { Container, Content, FormActions } from './styles'
 import { NextSeo } from 'next-seo'
+import { AnimationContainer } from '@/styles/animation'
 
 const accessFormSchema = z.object({
   code: z.string(),
@@ -63,30 +64,32 @@ export default function States() {
       <NextSeo title="Acesso Restrito | Pje OAB-MA" noindex />
 
       <Container>
-        <Content as="form" onSubmit={handleSubmit(handleAccessRestricted)}>
-          <label>
-            <Text as="strong">Código de acesso</Text>
-            <input
-              type="text"
-              placeholder="Digite o código de acesso"
-              {...register('code')}
-              required
-            />
+        <AnimationContainer>
+          <Content as="form" onSubmit={handleSubmit(handleAccessRestricted)}>
+            <label>
+              <Text as="strong">Código de acesso</Text>
+              <input
+                type="text"
+                placeholder="Digite o código de acesso"
+                {...register('code')}
+                required
+              />
 
-            {errors.code &&
-              Toast({
-                type: 'error',
-                message: String(errors.code.message),
-              })}
-          </label>
+              {errors.code &&
+                Toast({
+                  type: 'error',
+                  message: String(errors.code.message),
+                })}
+            </label>
 
-          <FormActions>
-            <Button type="submit">
-              <LockKeyOpen size={20} />
-              Acessar
-            </Button>
-          </FormActions>
-        </Content>
+            <FormActions>
+              <Button type="submit">
+                <LockKeyOpen size={20} />
+                Acessar
+              </Button>
+            </FormActions>
+          </Content>
+        </AnimationContainer>
       </Container>
     </>
   )

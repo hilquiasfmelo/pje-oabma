@@ -34,7 +34,7 @@ export const Content = styled('div', {
       borderRadius: '$sm',
 
       '&:focus': {
-        border: '2px solid $orange9',
+        border: '2px solid $tomato8',
       },
     },
 

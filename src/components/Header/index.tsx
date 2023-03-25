@@ -43,6 +43,10 @@ export function Header() {
           <SeparationsContent />
 
           <Link href="/crime-zone">Área Criminal</Link>
+
+          <SeparationsContent />
+
+          <Link href="/others">Outros Sistemas</Link>
         </ContentLinks>
 
         <Button type="button" onClick={() => router.push('/auth')}>

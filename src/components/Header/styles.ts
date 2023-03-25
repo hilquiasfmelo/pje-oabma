@@ -78,8 +78,8 @@ export const ContentLinks = styled('nav', {
     alignItems: 'center',
 
     '&:hover': {
-      color: '$orange9',
-      borderBottom: '1px solid $gray12',
+      color: '$gray12',
+      borderBottom: '2px solid $tomato8',
       fontSize: '1.1rem',
     },
 

@@ -38,7 +38,7 @@ export const Content = styled('div', {
       borderRadius: '$sm',
 
       '&:focus': {
-        border: '2px solid $orange9',
+        border: '2px solid $tomato8',
       },
     },
   },
@@ -71,7 +71,7 @@ export const FormActions = styled('div', {
 })
 
 export const SeparationsContent = styled('div', {
-  border: '1px solid $orange9',
+  border: '1px solid $tomato8',
   height: '70vh',
   borderRadius: '$full',
   marginTop: '$16',

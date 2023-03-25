@@ -13,6 +13,7 @@ import { Courts } from './courts'
 
 import { Container, Content, SeparationsContent, FormActions } from './styles'
 import { NextSeo } from 'next-seo'
+import { AnimationContainer } from '@/styles/animation'
 
 const statesFormSchema = z.object({
   name: z
@@ -85,50 +86,54 @@ export default function States() {
       <NextSeo title="Cadastro | Pje OAB-MA" noindex />
 
       <Container>
-        <Content as="form" onSubmit={handleSubmit(handleCreateStates)}>
-          <label>
-            <Text as="strong">Nome do Estado</Text>
-            <input
-              type="text"
-              placeholder="Digite o nome do estado"
-              {...register('name')}
-              required
-            />
+        <AnimationContainer>
+          <Content as="form" onSubmit={handleSubmit(handleCreateStates)}>
+            <label>
+              <Text as="strong">Nome do Estado</Text>
+              <input
+                type="text"
+                placeholder="Digite o nome do estado"
+                {...register('name')}
+                required
+              />
 
-            {errors.name &&
-              Toast({
-                type: 'error',
-                message: String(errors.name.message),
-              })}
-          </label>
+              {errors.name &&
+                Toast({
+                  type: 'error',
+                  message: String(errors.name.message),
+                })}
+            </label>
 
-          <label>
-            <Text as="strong">Sigla do Estado</Text>
-            <input
-              type="text"
-              placeholder="Digite o nome do estado"
-              {...register('acronym')}
-              required
-            />
+            <label>
+              <Text as="strong">Sigla do Estado</Text>
+              <input
+                type="text"
+                placeholder="Digite o nome do estado"
+                {...register('acronym')}
+                required
+              />
 
-            {errors.acronym &&
-              Toast({
-                type: 'error',
-                message: String(errors.acronym.message),
-              })}
-          </label>
+              {errors.acronym &&
+                Toast({
+                  type: 'error',
+                  message: String(errors.acronym.message),
+                })}
+            </label>
 
-          <FormActions>
-            <Button type="submit">
-              <FloppyDisk size={20} />
-              Registrar estado
-            </Button>
-          </FormActions>
-        </Content>
+            <FormActions>
+              <Button type="submit">
+                <FloppyDisk size={20} />
+                Registrar estado
+              </Button>
+            </FormActions>
+          </Content>
+        </AnimationContainer>
 
         <SeparationsContent />
 
-        <Courts />
+        <AnimationContainer>
+          <Courts />
+        </AnimationContainer>
       </Container>
     </>
   )

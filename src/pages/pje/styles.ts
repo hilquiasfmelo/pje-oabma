@@ -4,13 +4,14 @@ import { styled } from '@/styles'
 
 export const Container = styled('div', {
   maxWidth: 880,
-  border: '1px solid $orange9',
+  border: '2px solid $tomato8',
   borderRadius: '$sm',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   margin: '0 auto',
   padding: '0 0 $16',
+  background: '$gray12',
   gap: '$4',
   boxShadow:
     'rgba(50, 50, 93, 0.75) 0px 6px 12px -2px, rgba(0, 0, 0, 0.9) 0px 3px 7px -3px',
@@ -25,7 +26,7 @@ export const Header = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: '$orange9',
+  background: '$tomato8',
   borderTopLeftRadius: '$sm',
   borderTopRightRadius: '$sm',
   color: '$gray12',
@@ -87,7 +88,7 @@ export const ContentOptions = styled('div', {
   select: {
     padding: '$2 $5',
     borderRadius: '$sm',
-    border: '2px solid $orange9',
+    border: '2px solid $tomato8',
     fontSize: '$sm',
     color: '$gray1',
     background: '#FFF',

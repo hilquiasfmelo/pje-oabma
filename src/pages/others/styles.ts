@@ -23,7 +23,7 @@ export const Container = styled('div', {
 
 export const Content = styled('div', {
   maxWidth: 880,
-  border: '2px solid $gray5',
+  border: '2px solid $blue6',
   borderRadius: '$sm',
   display: 'flex',
   flexDirection: 'column',
@@ -45,7 +45,7 @@ export const Header = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: '$gray5',
+  background: '$blue6',
   borderTopLeftRadius: '$sm',
   borderTopRightRadius: '$sm',
   color: '$gray12',

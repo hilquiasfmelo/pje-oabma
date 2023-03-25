@@ -6,10 +6,9 @@ import { Text } from '@/components/Text'
 import { Button } from '@/components/Button'
 
 import oabLogo from '@/assets/logo-oabma.png'
-import seeuLogo from '@/assets/logo-seeu.svg'
-import seapLogo from '@/assets/logo-seap.svg'
+import geridLogo from '@/assets/logo-gerid.png'
 
-import { LINK_SEEU, LINK_SIISP, SITE_OABMA } from '@/utils/links-download'
+import { LINK_GERID, SITE_OABMA } from '@/utils/links-download'
 
 import {
   Container,
@@ -21,10 +20,10 @@ import {
 } from './styles'
 import { AnimationContainer } from '@/styles/animation'
 
-export default function CrimeZone() {
+export default function OthersSystems() {
   return (
     <>
-      <NextSeo title="Área Criminal | Pje OAB-MA" />
+      <NextSeo title="Outros sistemas | Pje OAB-MA" />
 
       <Container>
         <AnimationContainer>
@@ -48,7 +47,7 @@ export default function CrimeZone() {
               </ContentImage>
               <Text as="strong">
                 Disponibilizamos essa área para acesso direto aos principais
-                Sistemas Criminais
+                sistemas usados pela Advocacia em todo território nacional
               </Text>
             </Header>
 
@@ -60,36 +59,17 @@ export default function CrimeZone() {
               <ContentOptions>
                 <div>
                   <Image
-                    src={seeuLogo}
-                    width={150}
-                    height={70}
+                    src={geridLogo}
+                    width={200}
+                    height={80}
                     priority
                     quality={100}
-                    title="O Sistema Eletrônico de Execução Unificado – SEEU é um sistema informatizado, bastante fácil e intuitivo, gerenciado pelo Conselho Nacional de Justiça - CNJ e tem como objetivo suprir a integralidade das demandas de procedimentos exigidas para processamento e tramitação de processos de Execução Penal."
-                    alt="Logo do SEEU"
+                    title="O Gerid é o sistema de autenticação e gestão de usuários dos sistemas da Superintendência Nacional de Previdência Complementar (Previc)."
+                    alt="Logo do GERID"
                   />
                   <Button
                     type="button"
-                    onClick={() => window.open(LINK_SEEU, '_blank')}
-                  >
-                    <Link size={20} />
-                    Acessar
-                  </Button>
-                </div>
-
-                <div>
-                  <Image
-                    src={seapLogo}
-                    width={150}
-                    height={74}
-                    priority
-                    quality={100}
-                    title="Sistema gerenciado pelo Poder Executivo do Maranhão (Secretaria de Justiça e Administração Penitenciária – SEJAP). É utilizado para pesquisar os presos no sistema prisional do Estado do Maranhão."
-                    alt="Logo do SIISP"
-                  />
-                  <Button
-                    type="button"
-                    onClick={() => window.open(LINK_SIISP, '_blank')}
+                    onClick={() => window.open(LINK_GERID, '_blank')}
                   >
                     <Link size={20} />
                     Acessar

@@ -15,3 +15,6 @@ export const LINK_PJE =
 export const LINK_SEEU = 'https://seeu.pje.jus.br/seeu'
 
 export const LINK_SIISP = 'https://siisp.ma.gov.br/SIISP/login'
+
+export const LINK_GERID =
+  'https://novorequerimento.inss.gov.br/auth/login?loginwith=gerid'

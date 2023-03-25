@@ -4,7 +4,7 @@ import { Text } from '../Text'
 
 export const Container = styled('footer', {
   width: '100%',
-  height: '$64',
+  height: '18rem',
   background: '$tomato8',
   color: '$gray12',
   display: 'flex',
@@ -33,7 +33,7 @@ export const ContentLinks = styled('section', {
   flexDirection: 'column',
   alignItems: 'flex-start',
   justifyContent: 'center',
-  width: 400,
+  width: 450,
 
   '> span': {
     marginTop: '$4',
@@ -58,20 +58,42 @@ export const ProgramsLinks = styled('section', {
   gridTemplateColumns: '1fr 1fr',
   placeItems: 'flex-start',
   width: '100%',
+  position: 'relative',
 
   '> a': {
     all: 'unset',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontWeight: '$bold',
+    fontWeight: '$medium',
     gap: '$1',
     marginTop: '$2',
     cursor: 'pointer',
     fontSize: '0.85rem',
 
+    img: {
+      position: 'absolute',
+      visibility: 'hidden',
+      opacity: 0,
+      bottom: 60,
+      left: 50,
+      background: '$gray12',
+      padding: '$2',
+      borderRadius: '$lg',
+      zIndex: 1,
+      transform: 'translateX(-50%) translateY(-50px)',
+      boxShadow: 'rgba(0, 0, 0, 0.56) 0px 22px 70px 4px',
+    },
+
     '&:hover': {
-      color: '$orange9',
+      color: '$gray10',
+
+      img: {
+        visibility: 'visible',
+        opacity: 1,
+        transform: 'translateX(-50%) translateY(0px)',
+        transition: '0.5s',
+      },
     },
   },
 

@@ -32,7 +32,7 @@ export const Content = styled('div', {
       borderRadius: '$sm',
 
       '&:focus': {
-        border: '2px solid $orange9',
+        border: '2px solid $tomato8',
       },
     },
   },
@@ -70,7 +70,7 @@ export const ContentOptions = styled('div', {
     outline: 0,
 
     '&:focus': {
-      border: '2px solid $orange9',
+      border: '2px solid $tomato8',
     },
 
     option: {

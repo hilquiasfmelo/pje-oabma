@@ -28,6 +28,8 @@ import {
 } from '@/utils/links-download'
 
 import oabLogo from '@/assets/logo-oabma.png'
+import tkSafe from '@/assets/tk-safe.png'
+import tkCert from '@/assets/tk-cert.png'
 
 export function Footer() {
   return (
@@ -49,7 +51,7 @@ export function Footer() {
         <span>
           <ArrowElbowDownRight size={25} />
           Links para download dos programas para usar o PJE <br />
-          Atenção: Disponível somente para sistemas com arquitetura x64. <br />
+          Atenção: Somente para sistemas com arquitetura x64. <br />
         </span>
 
         <ProgramsLinks>
@@ -60,10 +62,26 @@ export function Footer() {
           <Link href={LINK_SAFESIGN}>
             <IconLink size={20} />
             Driver Token GD-Safesign
+            <Image
+              src={tkSafe}
+              width={130}
+              height={100}
+              quality={100}
+              priority={true}
+              alt="Token Safesign"
+            />
           </Link>
           <Link href={LINK_CERTISIGN}>
             <IconLink size={20} />
             Driver Token Certisign
+            <Image
+              src={tkCert}
+              width={130}
+              height={100}
+              quality={100}
+              priority={true}
+              alt="Token Certisign"
+            />
           </Link>
           <Link href={LINK_PJE}>
             <IconLink size={20} />

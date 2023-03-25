@@ -1,3 +1,4 @@
+import { AnimationContainer } from '@/styles/animation'
 import { NextSeo } from 'next-seo'
 import { Pje } from '../pje'
 
@@ -11,7 +12,9 @@ export default function Home() {
         description="Acesse tribunais de todos os estados brasileiros."
       />
       <Container>
-        <Pje />
+        <AnimationContainer>
+          <Pje />
+        </AnimationContainer>
       </Container>
     </>
   )

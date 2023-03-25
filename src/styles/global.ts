@@ -9,9 +9,9 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    fontFamily: 'Roboto Slab, sans-serif',
+    fontFamily: 'Inter, sans-serif',
     color: '$gray4',
-    background: '$gray12',
+    background: '#fff',
     '-webkit-font-smoothing': 'antialiased',
   },
 })
