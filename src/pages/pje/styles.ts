@@ -100,7 +100,7 @@ export const ContentOptions = styled('div', {
     option: {
       background: '#FFF',
       color: '$gray5',
-      fontFamily: 'Roboto Slab',
+      fontFamily: 'Inter',
     },
   },
 
