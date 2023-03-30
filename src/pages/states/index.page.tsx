@@ -1,4 +1,7 @@
+import { NextSeo } from 'next-seo'
+import { GetServerSideProps } from 'next'
 import { FloppyDisk } from 'phosphor-react'
+import { parseCookies } from 'nookies'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { AxiosError } from 'axios'
@@ -12,7 +15,6 @@ import { API } from '@/lib/axios'
 import { Courts } from './courts'
 
 import { Container, Content, SeparationsContent, FormActions } from './styles'
-import { NextSeo } from 'next-seo'
 import { AnimationContainer } from '@/styles/animation'
 
 const statesFormSchema = z.object({
@@ -137,4 +139,21 @@ export default function States() {
       </Container>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { '@pje:accessId': token } = parseCookies(ctx)
+
+  if (!token) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
+
+  return {
+    props: {},
+  }
 }

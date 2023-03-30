@@ -41,10 +41,6 @@ export const Content = styled('div', {
     fontWeight: '$regular',
     padding: '$3 $4',
 
-    '&:not(:disabled):hover': {
-      background: '$tomato7',
-    },
-
     '@media(max-width: 1368px)': {
       padding: '$2 $3',
       fontSize: '0.69rem',
@@ -76,6 +72,12 @@ export const ContentLinks = styled('nav', {
     display: 'inline-block',
     position: 'relative',
     alignItems: 'center',
+
+    '&.active': {
+      color: '$gray12',
+      borderBottom: '2px solid $tomato8',
+      fontSize: '1.1rem',
+    },
 
     '&:hover': {
       color: '$gray12',
@@ -118,4 +120,11 @@ export const ContentImage = styled('a', {
     marginTop: '-$3',
     color: '#FFF',
   },
+})
+
+export const ButtonsContainer = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '$4',
 })

@@ -32,9 +32,6 @@ export default async function handler(
 
   setCookie({ res }, '@pje:accessId', access.id, {
     maxAge: 60 * 60 * 1, // 1h
-    sameSite: 'strict',
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
     path: '/',
   })
 

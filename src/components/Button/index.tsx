@@ -24,6 +24,32 @@ export const Button = styled('button', {
   '&:disabled': {
     cursor: 'not-allowed',
   },
+
+  variants: {
+    variant: {
+      primary: {
+        '&:not(:disabled):hover': {
+          background: '$blue5',
+        },
+      },
+
+      secondary: {
+        '&:not(:disabled):hover': {
+          background: '$gray10',
+        },
+      },
+
+      danger: {
+        '&:not(:disabled):hover': {
+          background: '$tomato7',
+        },
+      },
+    },
+  },
+
+  defaultVariants: {
+    variant: 'primary',
+  },
 })
 
 export interface ButtonProps extends ComponentProps<typeof Button> {

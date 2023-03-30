@@ -79,7 +79,7 @@ export const ContentOptions = styled('div', {
       fontWeight: '$bold',
       color: '$gray5',
       borderRadius: '$sm',
-      fontFamily: 'Roboto Slab',
+      fontFamily: 'Inter',
       outline: 0,
     },
   },

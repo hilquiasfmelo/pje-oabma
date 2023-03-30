@@ -1,12 +1,16 @@
+import { MouseEvent, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import { Lock } from 'phosphor-react'
+import { List, SignIn, SignOut } from 'phosphor-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { Text } from '../Text'
 import { Button } from '../Button'
+import { SITE_OABMA } from '@/utils/links-download'
+import { useAuth } from '@/hooks/useAuth'
 
 import {
+  ButtonsContainer,
   Container,
   Content,
   ContentImage,
@@ -16,10 +20,32 @@ import {
 
 import oabLogo from '@/assets/logo-oabma.png'
 
-import { SITE_OABMA } from '@/utils/links-download'
-
 export function Header() {
+  const [isAuthenticated, setIsAuthenticated] = useState<string | null>(null)
+  const { token, signOut } = useAuth()
+
   const router = useRouter()
+
+  useEffect(() => {
+    setIsAuthenticated(token)
+  }, [token])
+
+  function handleLogout() {
+    signOut()
+
+    router.push('/')
+  }
+
+  function handleClick(event: MouseEvent<HTMLAnchorElement>) {
+    const link = event.target as HTMLAnchorElement
+    const links = document.querySelectorAll('.link')
+
+    links.forEach((link) => {
+      link.classList.remove('active')
+    })
+
+    link.classList.add('active')
+  }
 
   return (
     <Container>
@@ -38,21 +64,54 @@ export function Header() {
         </ContentImage>
 
         <ContentLinks>
-          <Link href="/">Acessar Pje</Link>
+          <Link href="/" className="link" onClick={handleClick}>
+            Acessar Pje
+          </Link>
 
           <SeparationsContent />
 
-          <Link href="/crime-zone">Área Criminal</Link>
+          <Link href="/crime-zone" className="link" onClick={handleClick}>
+            Área Criminal
+          </Link>
 
           <SeparationsContent />
 
-          <Link href="/others">Outros Sistemas</Link>
+          <Link href="/others" className="link" onClick={handleClick}>
+            Outros Sistemas
+          </Link>
         </ContentLinks>
 
-        <Button type="button" onClick={() => router.push('/auth')}>
-          <Lock size={15} />
-          Acesso Restrito
-        </Button>
+        {isAuthenticated ? (
+          <ButtonsContainer>
+            <Button
+              variant="secondary"
+              type="button"
+              onClick={() => router.push('/show-courts')}
+            >
+              <List size={15} />
+              Acessar tribunais
+            </Button>
+
+            <Button
+              type="button"
+              onClick={handleLogout}
+              title="Encerrar sessão"
+              variant="danger"
+            >
+              <SignOut size={15} />
+              Sair
+            </Button>
+          </ButtonsContainer>
+        ) : (
+          <Button
+            variant="danger"
+            type="button"
+            onClick={() => router.push('/auth')}
+          >
+            <SignIn size={15} />
+            Acesso Restrito
+          </Button>
+        )}
       </Content>
     </Container>
   )
