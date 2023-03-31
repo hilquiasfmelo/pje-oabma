@@ -9,6 +9,7 @@ export const Container = styled('div', {
   justifyContent: 'center',
   height: '100vh',
   position: 'relative',
+  margin: '1rem auto 0',
   background: 'radial-gradient(circle, #ddd 5%, transparent 11%)',
   backgroundSize: '3em 3em',
   backgroundColor: '#ffffff',

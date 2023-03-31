@@ -3,7 +3,7 @@ import { Button } from '../Button'
 import { Text } from '../Text'
 
 export const Container = styled('header', {
-  height: '$16',
+  height: '$20',
   color: '$gray12',
   background: '$blue5',
   borderBottom: '1px solid $gray12',
@@ -19,10 +19,6 @@ export const Container = styled('header', {
   left: 0,
   right: 0,
   zIndex: 1,
-
-  '@media(min-width: 1369px)': {
-    height: '$20',
-  },
 
   '@media(max-width: 425px)': {
     height: '$20',
@@ -76,17 +72,17 @@ export const ContentLinks = styled('nav', {
     '&.active': {
       color: '$gray12',
       borderBottom: '2px solid $tomato8',
-      fontSize: '1.1rem',
+      fontSize: '0.85rem',
     },
 
     '&:hover': {
       color: '$gray12',
       borderBottom: '2px solid $tomato8',
-      fontSize: '1.1rem',
+      fontSize: '1.0rem',
     },
 
     '@media(max-width: 1368px)': {
-      fontSize: '0.75rem',
+      fontSize: '0.85rem',
 
       '&:hover': {
         fontSize: '0.85rem',
@@ -112,13 +108,22 @@ export const SeparationsContent = styled('div', {
 export const ContentImage = styled('a', {
   display: 'flex',
   alignItems: 'center',
-  flexDirection: 'column',
+  justifyContent: 'center',
   cursor: 'pointer',
   textDecoration: 'none',
+  // gap: '$2',
 
-  [`> ${Text}`]: {
-    marginTop: '-$3',
-    color: '#FFF',
+  'div.site': {},
+
+  'div.img': {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+
+    [`> ${Text}`]: {
+      marginTop: '-$3',
+      color: '#FFF',
+    },
   },
 })
 
@@ -127,4 +132,15 @@ export const ButtonsContainer = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   gap: '$4',
+
+  [`> ${Button}`]: {
+    fontSize: '0.85rem',
+    fontWeight: '$regular',
+    padding: '$3 $4',
+
+    '@media(max-width: 1368px)': {
+      padding: '$2 $3',
+      fontSize: '0.69rem',
+    },
+  },
 })

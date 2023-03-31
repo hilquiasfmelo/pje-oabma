@@ -19,6 +19,7 @@ import {
 } from './styles'
 
 import oabLogo from '@/assets/logo-oabma.png'
+import site from '@/assets/access-site.png'
 
 export function Header() {
   const [isAuthenticated, setIsAuthenticated] = useState<string | null>(null)
@@ -45,22 +46,48 @@ export function Header() {
     })
 
     link.classList.add('active')
+
+    // Remove a ação de selecionado dos Links caso clique em outro botao que não tenha a classe .link
+    document.addEventListener('click', (event) => {
+      const clickedElement = event.target as HTMLElement
+      const links = document.querySelectorAll('.link')
+
+      if (!clickedElement.classList.contains('link')) {
+        links.forEach((link) => {
+          if (link.classList.contains('active')) {
+            link.classList.remove('active')
+          }
+        })
+      }
+    })
   }
 
   return (
     <Container>
       <Content>
         <ContentImage target="_blank" href={SITE_OABMA} title="Ir ao site">
-          <Image
-            src={oabLogo}
-            width={90}
-            height={40}
-            quality={100}
-            priority
-            alt="Logo Pje"
-          />
+          <div className="site">
+            <Image
+              src={site}
+              width={100}
+              height={50}
+              quality={100}
+              priority
+              alt="Logo Pje"
+            />
+          </div>
+          <div className="img">
+            <Image
+              src={oabLogo}
+              width={90}
+              height={40}
+              quality={100}
+              priority
+              alt="Logo Pje"
+            />
 
-          <Text as="strong">MARANHÃO</Text>
+            <Text as="strong">MARANHÃO</Text>
+          </div>
         </ContentImage>
 
         <ContentLinks>

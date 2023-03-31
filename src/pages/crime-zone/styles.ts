@@ -3,12 +3,13 @@ import { Text } from '@/components/Text'
 import { styled } from '@/styles'
 
 export const Container = styled('div', {
-  maxWidth: '100%',
+  maxWidth: 880,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   height: '100vh',
   position: 'relative',
+  margin: '1rem auto 0',
   background: 'radial-gradient(circle, #ddd 5%, transparent 11%)',
   backgroundSize: '3em 3em',
   backgroundColor: '#ffffff',
