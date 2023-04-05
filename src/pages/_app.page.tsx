@@ -9,7 +9,6 @@ import { AuthProvider } from '@/hooks/useAuth'
 import { Footer } from '@/components/Footer'
 
 import { globalStyles } from '../styles/global'
-import '../../public/scrollbar.css'
 import 'react-toastify/dist/ReactToastify.css'
 
 globalStyles()
