@@ -28,22 +28,30 @@ export const Container = styled('footer', {
   },
 })
 
+export const ContainerLinks = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '$5',
+})
+
 export const ContentLinks = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
   justifyContent: 'center',
   width: 450,
+  gap: '$1',
 
   '> span': {
-    marginTop: '$4',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     gap: '$2',
-    fontWeight: '$regular',
+    fontWeight: '$bold',
 
     '@media(max-width: 1368px)': {
-      fontSize: '0.78rem',
+      fontSize: '0.80rem',
     },
   },
 
@@ -53,7 +61,6 @@ export const ContentLinks = styled('section', {
 })
 
 export const ProgramsLinks = styled('section', {
-  marginTop: '$3',
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   placeItems: 'flex-start',
@@ -67,9 +74,9 @@ export const ProgramsLinks = styled('section', {
     justifyContent: 'center',
     fontWeight: '$medium',
     gap: '$1',
-    marginTop: '$2',
+    marginTop: '$1',
     cursor: 'pointer',
-    fontSize: '0.85rem',
+    fontSize: '$xs',
 
     img: {
       position: 'absolute',
@@ -109,6 +116,7 @@ export const ContentImage = styled('a', {
   borderBottom: '1px solid $gray12',
   gap: '$2',
   width: '100%',
+  marginBottom: '$4',
 
   [`> ${Text}`]: {
     marginTop: '-$4',

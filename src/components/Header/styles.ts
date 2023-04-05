@@ -94,7 +94,7 @@ export const ContentLinks = styled('nav', {
     padding: '$5 $5',
 
     '> a': {
-      fontSize: '$md',
+      fontSize: '$sm',
     },
   },
 })

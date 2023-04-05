@@ -8,12 +8,14 @@ import {
   Contacts,
   Container,
   ContentImage,
+  ContainerLinks,
   ContentLinks,
   ProgramsLinks,
 } from './styles'
 
 import {
   ArrowElbowDownRight,
+  Download,
   Envelope,
   Link as IconLink,
   MapPinLine,
@@ -21,6 +23,7 @@ import {
 } from 'phosphor-react'
 
 import {
+  LINK_ANYDESK,
   LINK_CERTISIGN,
   LINK_JAVA,
   LINK_PJE,
@@ -34,61 +37,77 @@ import tkCert from '@/assets/tk-cert.png'
 export function Footer() {
   return (
     <Container>
-      <ContentLinks>
-        <ContentImage>
-          <Image
-            src={oabLogo}
-            width={70}
-            height={30}
-            quality={100}
-            priority
-            alt="Logo Pje"
-          />
-
-          <Text as="strong">MARANHÃO</Text>
-        </ContentImage>
-
-        <span>
-          <ArrowElbowDownRight size={25} />
-          Links para download dos programas para usar o PJE <br />
-          Atenção: Somente para sistemas com arquitetura x64. <br />
-        </span>
-
-        <ProgramsLinks>
-          <Link href={LINK_JAVA}>
-            <IconLink size={20} />
-            Download Java SE
-          </Link>
-          <Link href={LINK_SAFESIGN}>
-            <IconLink size={20} />
-            Driver Token GD-Safesign
+      <ContainerLinks>
+        <ContentLinks>
+          <ContentImage>
             <Image
-              src={tkSafe}
-              width={130}
-              height={100}
+              src={oabLogo}
+              width={70}
+              height={30}
               quality={100}
-              priority={true}
-              alt="Token Safesign"
+              priority
+              alt="Logo Pje"
             />
-          </Link>
-          <Link href={LINK_CERTISIGN}>
-            <IconLink size={20} />
-            Driver Token Certisign
-            <Image
-              src={tkCert}
-              width={130}
-              height={100}
-              quality={100}
-              priority={true}
-              alt="Token Certisign"
-            />
-          </Link>
-          <Link href={LINK_PJE}>
-            <IconLink size={20} />
-            Assinador PjeOffice
-          </Link>
-        </ProgramsLinks>
-      </ContentLinks>
+
+            <Text as="strong">MARANHÃO</Text>
+          </ContentImage>
+
+          <span>
+            <ArrowElbowDownRight size={25} />
+            Links para download dos programas para usar o PJE
+          </span>
+
+          <ProgramsLinks>
+            <Link href={LINK_JAVA}>
+              <IconLink size={17} />
+              Download Java SE
+            </Link>
+            <Link href={LINK_SAFESIGN}>
+              <IconLink size={17} />
+              Driver Token GD-Safesign
+              <Image
+                src={tkSafe}
+                width={130}
+                height={100}
+                quality={100}
+                priority={true}
+                alt="Token Safesign"
+              />
+            </Link>
+            <Link href={LINK_PJE}>
+              <IconLink size={17} />
+              Assinador PjeOffice
+            </Link>
+
+            <Link href={LINK_CERTISIGN}>
+              <IconLink size={17} />
+              Driver Token Certisign
+              <Image
+                src={tkCert}
+                width={130}
+                height={100}
+                quality={100}
+                priority={true}
+                alt="Token Certisign"
+              />
+            </Link>
+          </ProgramsLinks>
+        </ContentLinks>
+
+        <ContentLinks>
+          <span>
+            <Download size={25} />
+            Deseja acesso remoto? Baixe aqui o Anydesk
+          </span>
+
+          <ProgramsLinks>
+            <Link href={LINK_ANYDESK} target="_blank">
+              <IconLink size={17} />
+              Download Anydesk
+            </Link>
+          </ProgramsLinks>
+        </ContentLinks>
+      </ContainerLinks>
 
       <Contacts>
         <div>
