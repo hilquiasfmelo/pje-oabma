@@ -54,7 +54,7 @@ export function Footer() {
 
           <span>
             <ArrowElbowDownRight size={25} />
-            Links para download dos programas para usar o PJE
+            Download dos programas para usar o PJE
           </span>
 
           <ProgramsLinks>

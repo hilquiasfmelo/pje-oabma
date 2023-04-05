@@ -1,5 +1,15 @@
-import { styled } from '@/styles'
+import { keyframes, styled } from '@/styles'
 import { ComponentProps, ElementType } from 'react'
+
+const loading = keyframes({
+  from: {
+    transform: 'rotate(0deg)',
+  },
+
+  to: {
+    transform: 'rotate(360deg)',
+  },
+})
 
 export const Button = styled('button', {
   all: 'unset',
@@ -42,6 +52,16 @@ export const Button = styled('button', {
       danger: {
         '&:not(:disabled):hover': {
           background: '$tomato7',
+        },
+      },
+
+      spinner: {
+        '> svg': {
+          width: '$6',
+          height: '$6',
+          color: '$gray12',
+          fontWeight: '$bold',
+          animation: `${loading} 5s linear infinite`,
         },
       },
     },

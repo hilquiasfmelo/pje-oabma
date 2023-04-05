@@ -76,7 +76,6 @@ export const ContentImage = styled('a', {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  cursor: 'pointer',
   textDecoration: 'none',
   borderTopLeftRadius: '$sm',
   marginLeft: '$8',
@@ -92,7 +91,7 @@ export const ContentLinks = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  gap: '$8',
+  gap: '$4',
 })
 
 export const ContentOptions = styled('div', {
@@ -100,9 +99,9 @@ export const ContentOptions = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '$30',
+  gap: '4rem',
 
-  div: {
+  '> div': {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -115,6 +114,7 @@ export const ContentOptions = styled('div', {
       justifyContent: 'center',
       padding: '$2 $10',
       fontWeight: '$regular',
+      borderRadius: 0,
     },
   },
 
@@ -123,4 +123,10 @@ export const ContentOptions = styled('div', {
     alignItems: 'center',
     gap: '$5',
   },
+})
+
+export const SeparationsContent = styled('div', {
+  border: '1px solid $gray5',
+  height: '8rem',
+  borderRadius: '$full',
 })

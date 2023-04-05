@@ -8,7 +8,7 @@ import { Button } from '@/components/Button'
 import oabLogo from '@/assets/logo-oabma.png'
 import geridLogo from '@/assets/logo-gerid.png'
 
-import { LINK_GERID, SITE_OABMA } from '@/utils/links-download'
+import { LINK_GERID } from '@/utils/links-download'
 
 import {
   Container,
@@ -29,15 +29,11 @@ export default function OthersSystems() {
         <AnimationContainer>
           <Content>
             <Header>
-              <ContentImage
-                target="_blank"
-                href={SITE_OABMA}
-                title="Ir ao site"
-              >
+              <ContentImage>
                 <Image
                   src={oabLogo}
-                  width={90}
-                  height={40}
+                  width={110}
+                  height={50}
                   quality={100}
                   priority
                   alt="Logo Pje"
@@ -60,7 +56,7 @@ export default function OthersSystems() {
                 <div>
                   <Image
                     src={geridLogo}
-                    width={200}
+                    width={300}
                     height={80}
                     priority
                     quality={100}

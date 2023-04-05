@@ -9,7 +9,7 @@ import oabLogo from '@/assets/logo-oabma.png'
 import seeuLogo from '@/assets/logo-seeu.svg'
 import seapLogo from '@/assets/logo-seap.svg'
 
-import { LINK_SEEU, LINK_SIISP, SITE_OABMA } from '@/utils/links-download'
+import { LINK_SEEU, LINK_SIISP } from '@/utils/links-download'
 
 import {
   Container,
@@ -18,6 +18,7 @@ import {
   Header,
   ContentOptions,
   ContentImage,
+  SeparationsContent,
 } from './styles'
 import { AnimationContainer } from '@/styles/animation'
 
@@ -30,15 +31,11 @@ export default function CrimeZone() {
         <AnimationContainer>
           <Content>
             <Header>
-              <ContentImage
-                target="_blank"
-                href={SITE_OABMA}
-                title="Ir ao site"
-              >
+              <ContentImage>
                 <Image
                   src={oabLogo}
-                  width={90}
-                  height={40}
+                  width={110}
+                  height={50}
                   quality={100}
                   priority
                   alt="Logo Pje"
@@ -77,11 +74,13 @@ export default function CrimeZone() {
                   </Button>
                 </div>
 
+                <SeparationsContent />
+
                 <div>
                   <Image
                     src={seapLogo}
                     width={150}
-                    height={74}
+                    height={70}
                     priority
                     quality={100}
                     title="Sistema gerenciado pelo Poder Executivo do Maranhão (Secretaria de Justiça e Administração Penitenciária – SEJAP). É utilizado para pesquisar os presos no sistema prisional do Estado do Maranhão."

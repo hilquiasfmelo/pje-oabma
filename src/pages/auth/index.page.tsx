@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { LockKeyOpen } from 'phosphor-react'
+import { LockKeyOpen, Spinner } from 'phosphor-react'
 import { AxiosError } from 'axios'
 import { z } from 'zod'
 
@@ -28,7 +28,8 @@ export default function States() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+
+    formState: { errors, isSubmitting },
   } = useForm<AccessFormData>({
     resolver: zodResolver(accessFormSchema),
   })
@@ -83,10 +84,17 @@ export default function States() {
             </label>
 
             <FormActions>
-              <Button type="submit">
-                <LockKeyOpen size={20} />
-                Acessar
-              </Button>
+              {isSubmitting ? (
+                <Button variant="spinner">
+                  <Spinner size={20} />
+                  Carregando
+                </Button>
+              ) : (
+                <Button type="submit">
+                  <LockKeyOpen size={20} />
+                  Acessar
+                </Button>
+              )}
             </FormActions>
           </Content>
         </AnimationContainer>

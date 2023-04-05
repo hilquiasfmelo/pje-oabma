@@ -9,7 +9,7 @@ export const Container = styled('div', {
   justifyContent: 'center',
   height: '100vh',
   position: 'relative',
-  margin: '1rem auto 0',
+  margin: '1.5rem auto 0',
 
   '@media (max-width: 425px)': {
     display: 'flex',
@@ -49,6 +49,10 @@ export const Header = styled('div', {
   marginBottom: '$8',
   padding: '$2 0',
 
+  '> img': {
+    borderTopLeftRadius: '$sm',
+  },
+
   [`> ${Text}`]: {
     width: '100%',
     display: 'flex',
@@ -76,10 +80,9 @@ export const ContentImage = styled('a', {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  cursor: 'pointer',
   textDecoration: 'none',
   borderTopLeftRadius: '$sm',
-  marginLeft: '$8',
+  marginLeft: '$6',
 
   [`> ${Text}`]: {
     marginTop: '-$3',
@@ -92,7 +95,7 @@ export const ContentLinks = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  gap: '$8',
+  gap: '$4',
 })
 
 export const ContentOptions = styled('div', {
@@ -115,6 +118,7 @@ export const ContentOptions = styled('div', {
       justifyContent: 'center',
       padding: '$2 $10',
       fontWeight: '$regular',
+      borderRadius: 0,
     },
   },
 

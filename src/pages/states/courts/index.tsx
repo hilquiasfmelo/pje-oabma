@@ -1,4 +1,4 @@
-import { FloppyDisk } from 'phosphor-react'
+import { FloppyDisk, Spinner } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useQuery } from '@tanstack/react-query'
@@ -31,7 +31,7 @@ export function Courts() {
     handleSubmit,
     watch,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<CourtsFormData>({
     resolver: zodResolver(courtsFormSchema),
   })
@@ -127,10 +127,17 @@ export function Courts() {
         </label>
 
         <FormActions>
-          <Button type="submit">
-            <FloppyDisk size={20} />
-            Registrar tribunal
-          </Button>
+          {isSubmitting ? (
+            <Button variant="spinner">
+              <Spinner size={20} />
+              Salvando
+            </Button>
+          ) : (
+            <Button type="submit">
+              <FloppyDisk size={20} />
+              Registrar tribunal
+            </Button>
+          )}
         </FormActions>
       </Content>
     </Container>

@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo'
 import { GetServerSideProps } from 'next'
-import { FloppyDisk } from 'phosphor-react'
+import { FloppyDisk, Spinner } from 'phosphor-react'
 import { parseCookies } from 'nookies'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -40,7 +40,7 @@ export default function States() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<StatesFormData>({
     resolver: zodResolver(statesFormSchema),
   })
@@ -123,10 +123,17 @@ export default function States() {
             </label>
 
             <FormActions>
-              <Button type="submit">
-                <FloppyDisk size={20} />
-                Registrar estado
-              </Button>
+              {isSubmitting ? (
+                <Button variant="spinner">
+                  <Spinner size={20} />
+                  Salvando
+                </Button>
+              ) : (
+                <Button type="submit">
+                  <FloppyDisk size={20} />
+                  Registrar estado
+                </Button>
+              )}
             </FormActions>
           </Content>
         </AnimationContainer>
