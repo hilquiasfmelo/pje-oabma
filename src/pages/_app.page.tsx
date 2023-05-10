@@ -1,6 +1,7 @@
 import { QueryClientProvider } from '@tanstack/react-query'
 import { DefaultSeo } from 'next-seo'
 import type { AppProps } from 'next/app'
+import GoogleAnalytics from '@bradgarropy/next-google-analytics'
 
 import { ToastProvider } from '@/lib/react-toastify'
 import { queryClient } from '@/lib/react-query'
@@ -26,6 +27,8 @@ export default function App({ Component, pageProps }: AppProps) {
             siteName: 'Pje OAB-MA',
           }}
         />
+        <GoogleAnalytics measurementId="G-E2MHDV4SE2" />
+
         <Component {...pageProps} />
         <Footer />
         <ToastProvider />
