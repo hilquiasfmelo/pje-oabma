@@ -21,6 +21,37 @@ export default function Document() {
           id="stitches"
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
+
+        {/* <title>Pje OAB-MA</title> */}
+        <meta name="title" content="Pje OAB-MA" />
+        <meta
+          name="description"
+          content="Acesse tribunais de todos os estados brasileiros."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pje-oabma.vercel.app/" />
+        <meta property="og:title" content="Pje OAB-MA" />
+        <meta
+          property="og:description"
+          content="Acesse tribunais de todos os estados brasileiros."
+        />
+        <meta
+          property="og:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://pje-oabma.vercel.app/" />
+        <meta property="twitter:title" content="Pje OAB-MA" />
+        <meta
+          property="twitter:description"
+          content="Acesse tribunais de todos os estados brasileiros."
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
       </Head>
 
       <body>
