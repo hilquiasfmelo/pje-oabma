@@ -36,7 +36,7 @@ import tkCert from '@/assets/tk-cert.png'
 
 export function Footer() {
   return (
-    <Container>
+    <Container id="footer">
       <ContainerLinks>
         <ContentLinks>
           <ContentImage>

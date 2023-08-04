@@ -3,6 +3,7 @@ import { globalCss } from './index'
 export const globalStyles = globalCss({
   '*': {
     boxSizing: 'border-box',
+    scrollBehavior: 'smooth',
     outline: 'none',
     padding: 0,
     margin: 0,
