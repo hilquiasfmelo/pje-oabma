@@ -38,7 +38,7 @@ export function Pje() {
   }
 
   async function handleAccessTribunal() {
-    if (stateId === 'Selecione um estado...' || url === '') {
+    if (!stateId || !url) {
       Toast({
         type: 'error',
         message: 'Por favor, selecione um estado e tribunal.',
