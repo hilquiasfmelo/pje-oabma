@@ -67,6 +67,7 @@ export function Pje() {
 
   return (
     <Container>
+      <h1>⚠️ Em manutenção ⚠️</h1>
       <Header>
         <Image
           src={pjeLogo}

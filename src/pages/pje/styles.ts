@@ -8,6 +8,7 @@ export const Container = styled('div', {
   borderRadius: '$sm',
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'center',
   justifyContent: 'center',
   position: 'relative',
   margin: '0 auto',
@@ -19,6 +20,10 @@ export const Container = styled('div', {
 
   '@media(max-width: 425px)': {
     padding: '0 6rem 2rem',
+  },
+
+  h1: {
+    color: '$tomato8',
   },
 })
 
