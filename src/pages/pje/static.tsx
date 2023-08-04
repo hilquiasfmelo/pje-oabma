@@ -13,6 +13,7 @@ import pjeLogo from '@/assets/pje-oabma.png'
 import { Container, Content, Header, ContentOptions } from './styles.static'
 import { useState } from 'react'
 import { Toast } from '@/lib/react-toastify/toasts'
+import { sortStatesAlphabetically } from '@/utils/sortStatesAlphabetically'
 
 interface PjeFormData {
   stateId: string
@@ -83,7 +84,7 @@ export function Pje() {
                 onChange={(e) => handleStateChange(e.target.value)}
               >
                 <option value="">Selecione um estado...</option>
-                {statesData.map((state) => (
+                {sortStatesAlphabetically(statesData).map((state) => (
                   <option key={state.id} value={state.id}>
                     {state.name}
                   </option>
@@ -100,7 +101,7 @@ export function Pje() {
               <select {...field} disabled={!stateId}>
                 <option value="">Selecione um tribunal...</option>
                 {courts.map((court) => (
-                  <option key={court.name} value={court.url}>
+                  <option key={court.url} value={court.url}>
                     {court.name}
                   </option>
                 ))}
