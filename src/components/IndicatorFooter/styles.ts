@@ -46,4 +46,8 @@ export const Container = styled('div', {
       fontSize: '$xs',
     },
   },
+
+  '@media(max-width: 425px)': {
+    display: 'none',
+  },
 })

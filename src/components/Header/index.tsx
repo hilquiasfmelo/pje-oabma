@@ -1,16 +1,11 @@
-import { MouseEvent, useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import { List, SignIn, SignOut } from 'phosphor-react'
+import { MouseEvent } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { Text } from '../Text'
-import { Button } from '../Button'
 import { SITE_OABMA } from '@/utils/links-download'
-import { useAuth } from '@/hooks/useAuth'
 
 import {
-  ButtonsContainer,
   Container,
   Content,
   ContentImage,
@@ -22,21 +17,6 @@ import oabLogo from '@/assets/logo-oabma.png'
 import site from '@/assets/access-site.png'
 
 export function Header() {
-  const [isAuthenticated, setIsAuthenticated] = useState<string | null>(null)
-  const { token, signOut } = useAuth()
-
-  const router = useRouter()
-
-  useEffect(() => {
-    setIsAuthenticated(token)
-  }, [token])
-
-  function handleLogout() {
-    signOut()
-
-    router.push('/')
-  }
-
   function handleClick(event: MouseEvent<HTMLAnchorElement>) {
     const link = event.target as HTMLAnchorElement
     const links = document.querySelectorAll('.link')
@@ -107,38 +87,6 @@ export function Header() {
             Outros Sistemas
           </Link>
         </ContentLinks>
-
-        {isAuthenticated ? (
-          <ButtonsContainer>
-            <Button
-              variant="secondary"
-              type="button"
-              onClick={() => router.push('/show-courts')}
-            >
-              <List size={15} />
-              Acessar tribunais
-            </Button>
-
-            <Button
-              type="button"
-              onClick={handleLogout}
-              title="Encerrar sessão"
-              variant="danger"
-            >
-              <SignOut size={15} />
-              Sair
-            </Button>
-          </ButtonsContainer>
-        ) : (
-          <Button
-            variant="danger"
-            type="button"
-            onClick={() => router.push('/auth')}
-          >
-            <SignIn size={15} />
-            Acesso Restrito
-          </Button>
-        )}
       </Content>
     </Container>
   )

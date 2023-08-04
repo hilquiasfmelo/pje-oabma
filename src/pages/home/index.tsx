@@ -1,6 +1,6 @@
 import { AnimationContainer } from '@/styles/animation'
 import { NextSeo } from 'next-seo'
-import { Pje } from '../pje'
+import { Pje } from '../pje/static'
 
 import { Container } from './styles'
 import { IndicatorFooter } from '@/components/IndicatorFooter'

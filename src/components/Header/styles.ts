@@ -13,7 +13,6 @@ export const Container = styled('header', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '$8',
   position: 'fixed',
   top: 0,
   left: 0,
@@ -30,19 +29,9 @@ export const Content = styled('div', {
   alignItems: 'center',
   justifyContent: 'space-between',
   width: '100%',
-  margin: '0 $10',
+  margin: '0 $6',
 
-  [`> ${Button}`]: {
-    fontSize: '0.85rem',
-    fontWeight: '$regular',
-    padding: '$3 $4',
-
-    '@media(max-width: 1368px)': {
-      padding: '$2 $3',
-      fontSize: '0.69rem',
-    },
-  },
-
+  // Pegar isso aqui
   '@media(max-width: 425px)': {
     height: '$20',
 
@@ -55,7 +44,7 @@ export const Content = styled('div', {
 export const ContentLinks = styled('nav', {
   display: 'flex',
   alignItems: 'center',
-  padding: '$5 $20',
+  padding: '$5 $10',
   gap: '$4',
 
   '> a': {
@@ -111,7 +100,6 @@ export const ContentImage = styled('a', {
   justifyContent: 'center',
   cursor: 'pointer',
   textDecoration: 'none',
-  // gap: '$2',
 
   'div.site': {},
 
