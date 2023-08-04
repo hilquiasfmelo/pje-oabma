@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-.env.build
+.env.example
 
 # next.js
 /.next/
