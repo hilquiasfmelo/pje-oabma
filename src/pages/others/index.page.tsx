@@ -23,7 +23,7 @@ import { AnimationContainer } from '@/styles/animation'
 export default function OthersSystems() {
   return (
     <>
-      <NextSeo title="Outros sistemas | Pje OAB-MA" />
+      <NextSeo title="Gerid INSS | Pje OAB-MA" />
 
       <Container>
         <AnimationContainer>
