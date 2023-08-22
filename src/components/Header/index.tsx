@@ -84,7 +84,7 @@ export function Header() {
           <SeparationsContent />
 
           <Link href="/others" className="link" onClick={handleClick}>
-            Outros Sistemas
+            Gerid INSS
           </Link>
         </ContentLinks>
       </Content>
