@@ -145,6 +145,14 @@ export const statesData: State[] = [
         url: 'https://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
       },
       {
+        name: 'TJAP 1º GRAU',
+        url: 'https://pje.tjap.jus.br/1g/login.seam',
+      },
+      {
+        name: 'TJAP 2º GRAU',
+        url: 'https://pje.tjap.jus.br/2g/login.seam',
+      },
+      {
         name: 'TRF 1ª REGIÃO - 1° GRAU',
         url: 'https://pje1g.trf1.jus.br/pje-web/login.seam',
       },
