@@ -1,7 +1,7 @@
 export const SITE_OABMA = 'https://www.oabma.org.br'
 
 export const LINK_JAVA =
-  'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249185_b291ca3e0c8548b5a51d5a5f50063037'
+  'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4'
 
 export const LINK_SAFESIGN =
   'https://safesign.gdamericadosul.com.br/content/windows_x64_3.5.3.0_aet.zip'
@@ -19,4 +19,4 @@ export const LINK_SEEU = 'https://seeu.pje.jus.br/seeu'
 
 export const LINK_SIISP = 'https://siisp.ma.gov.br/SIISP/login'
 
-export const LINK_GERID = 'https://novorequerimento.inss.gov.br/'
+export const LINK_GERID = 'https://atendimento.inss.gov.br/'
