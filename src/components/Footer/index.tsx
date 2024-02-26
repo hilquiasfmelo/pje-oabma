@@ -15,6 +15,7 @@ import {
 
 import {
   ArrowElbowDownRight,
+  ArrowFatLineDown,
   Download,
   Envelope,
   Link as IconLink,
@@ -27,6 +28,7 @@ import {
   LINK_CERTISIGN,
   LINK_JAVA,
   LINK_PJE,
+  LINK_PJE_PRO,
   LINK_SAFESIGN,
 } from '@/utils/links-download'
 
