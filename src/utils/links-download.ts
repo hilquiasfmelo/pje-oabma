@@ -15,8 +15,13 @@ export const LINK_ANYDESK =
 export const LINK_PJE =
   'https://cnj-pje-programs.s3-sa-east-1.amazonaws.com/pje-office/PJeOffice.exe'
 
+export const LINK_PJE_PRO =
+  'https://pjeoffice.trf3.jus.br/pjeoffice-pro/pjeoffice-pro-v2.5.11u-windows_x64.exe'
+
 export const LINK_SEEU = 'https://seeu.pje.jus.br/seeu'
 
 export const LINK_SIISP = 'https://siisp.ma.gov.br/SIISP/login'
 
 export const LINK_GERID = 'https://atendimento.inss.gov.br/'
+
+export const LINK_FIRST_ACCESS_GERID = 'https://acesso.dataprev.gov.br/clientes/?action=form-sendToken'
