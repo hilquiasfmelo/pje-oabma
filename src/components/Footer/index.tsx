@@ -54,42 +54,48 @@ export function Footer() {
 
           <span>
             <ArrowElbowDownRight size={25} />
-            Download dos programas para usar o PJE
+            Downloads dos programas para acessar o PJE no sistema Windows:
           </span>
 
           <ProgramsLinks>
             <Link href={LINK_JAVA}>
-              <IconLink size={17} />
-              Download Java SE
+                  <ArrowFatLineDown size={15} />
+                  Java SE
             </Link>
+            <Link href={LINK_CERTISIGN}>
+              <ArrowFatLineDown size={15} />
+                Driver Token SafeNet
+                <Image
+                  src={tkCert}
+                  width={130}
+                  height={100}
+                  quality={100}
+                  priority={true}
+                  alt="Token Certisign"
+                />
+            </Link>
+                    
             <Link href={LINK_SAFESIGN}>
-              <IconLink size={17} />
-              Driver Token GD-Safesign
-              <Image
-                src={tkSafe}
-                width={130}
-                height={100}
-                quality={100}
-                priority={true}
-                alt="Token Safesign"
-              />
+              <ArrowFatLineDown size={15} />
+                Driver Token GD-Safesign
+                <Image
+                  src={tkSafe}
+                  width={130}
+                  height={100}
+                  quality={100}
+                  priority={true}
+                  alt="Token Safesign"
+                />
             </Link>
-            <Link href={LINK_PJE}>
-              <IconLink size={17} />
-              Assinador PjeOffice
+            
+            <Link href={LINK_PJE_PRO}>
+              <ArrowFatLineDown size={15} />
+                Assinador PjeOffice PRO
             </Link>
 
-            <Link href={LINK_CERTISIGN}>
-              <IconLink size={17} />
-              Driver Token Certisign
-              <Image
-                src={tkCert}
-                width={130}
-                height={100}
-                quality={100}
-                priority={true}
-                alt="Token Certisign"
-              />
+            <Link href={LINK_PJE}>
+            <ArrowFatLineDown size={15} />
+              Assinador PjeOffice
             </Link>
           </ProgramsLinks>
         </ContentLinks>
@@ -102,14 +108,14 @@ export function Footer() {
 
           <ProgramsLinks>
             <Link href={LINK_ANYDESK} target="_blank">
-              <IconLink size={17} />
+            <ArrowFatLineDown size={17} />
               Download Anydesk
             </Link>
           </ProgramsLinks>
         </ContentLinks>
       </ContainerLinks>
 
-      <Contacts>
+    <Contacts>
         <div>
           <MapPinLine />
           <Text as="span">
@@ -121,6 +127,10 @@ export function Footer() {
         <div>
           <Phone />
           <Text as="span">(98) 2107-5412</Text>
+        </div>
+        <div>
+          <Phone />
+          <Text as="span">(98) 99145-4667</Text>
         </div>
 
         <div>
