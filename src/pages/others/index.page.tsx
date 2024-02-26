@@ -53,8 +53,7 @@ export default function OthersSystems() {
                 acessar:
               </Text>
               <ContentOptions>
-                <div>
-                  <Image
+              <Image
                     src={geridLogo}
                     width={300}
                     height={80}
@@ -63,14 +62,24 @@ export default function OthersSystems() {
                     title="O Gerid é o sistema de autenticação e gestão de usuários dos sistemas da Superintendência Nacional de Previdência Complementar (Previc)."
                     alt="Logo do GERID"
                   />
+                <div>
+                  
                   <Button
                     type="button"
                     onClick={() => window.open(LINK_GERID, '_blank')}
                   >
-                    <Link size={20} />
-                    Acessar
+                    <Link />
+                    Acessar o Gerid
+                  </Button>
+                  <Button
+                    type="button"
+                    onClick={() => window.open(LINK_FIRST_ACCESS_GERID, '_blank')}
+                  >
+                    <Link/>
+                    Primeiro acesso
                   </Button>
                 </div>
+       
               </ContentOptions>
             </ContentLinks>
           </Content>
