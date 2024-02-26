@@ -8,7 +8,7 @@ import { Button } from '@/components/Button'
 import oabLogo from '@/assets/logo-oabma.png'
 import geridLogo from '@/assets/logo-gerid.png'
 
-import { LINK_GERID } from '@/utils/links-download'
+import { LINK_FIRST_ACCESS_GERID, LINK_GERID } from '@/utils/links-download'
 
 import {
   Container,
