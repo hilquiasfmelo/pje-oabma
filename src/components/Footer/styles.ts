@@ -64,6 +64,7 @@ export const ProgramsLinks = styled('section', {
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   placeItems: 'flex-start',
+  gap: '$2',
   width: '100%',
   position: 'relative',
 
@@ -131,7 +132,7 @@ export const Contacts = styled('div', {
   alignItems: 'flex-start',
   justifyContent: 'center',
   marginTop: '$10',
-  gap: '$6',
+  gap: '$2',
   width: 400,
 
   '> div': {

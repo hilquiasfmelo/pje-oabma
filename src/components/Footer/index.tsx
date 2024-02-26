@@ -64,18 +64,6 @@ export function Footer() {
               <ArrowFatLineDown size={15} />
               Java SE
             </Link>
-            <Link href={LINK_CERTISIGN}>
-              <ArrowFatLineDown size={15} />
-              Driver Token SafeNet
-              <Image
-                src={tkCert}
-                width={130}
-                height={100}
-                quality={100}
-                priority={true}
-                alt="Token Certisign"
-              />
-            </Link>
 
             <Link href={LINK_SAFESIGN}>
               <ArrowFatLineDown size={15} />
@@ -90,14 +78,27 @@ export function Footer() {
               />
             </Link>
 
-            <Link href={LINK_PJE_PRO}>
-              <ArrowFatLineDown size={15} />
-              Assinador PjeOffice PRO
-            </Link>
-
             <Link href={LINK_PJE}>
               <ArrowFatLineDown size={15} />
               Assinador PjeOffice
+            </Link>
+
+            <Link href={LINK_CERTISIGN}>
+              <ArrowFatLineDown size={15} />
+              Driver Token SafeNet
+              <Image
+                src={tkCert}
+                width={130}
+                height={100}
+                quality={100}
+                priority={true}
+                alt="Token Certisign"
+              />
+            </Link>
+
+            <Link href={LINK_PJE_PRO}>
+              <ArrowFatLineDown size={15} />
+              Assinador PjeOffice PRO
             </Link>
           </ProgramsLinks>
         </ContentLinks>
