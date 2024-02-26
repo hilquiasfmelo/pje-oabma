@@ -24,4 +24,5 @@ export const LINK_SIISP = 'https://siisp.ma.gov.br/SIISP/login'
 
 export const LINK_GERID = 'https://atendimento.inss.gov.br/'
 
-export const LINK_FIRST_ACCESS_GERID = 'https://acesso.dataprev.gov.br/clientes/?action=form-sendToken'
+export const LINK_FIRST_ACCESS_GERID =
+  'https://acesso.dataprev.gov.br/clientes/?action=form-sendToken'
