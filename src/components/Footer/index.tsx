@@ -18,9 +18,9 @@ import {
   ArrowFatLineDown,
   Download,
   Envelope,
-  Link as IconLink,
   MapPinLine,
   Phone,
+  WhatsappLogo,
 } from 'phosphor-react'
 
 import {
@@ -61,42 +61,42 @@ export function Footer() {
 
           <ProgramsLinks>
             <Link href={LINK_JAVA}>
-                  <ArrowFatLineDown size={15} />
-                  Java SE
+              <ArrowFatLineDown size={15} />
+              Java SE
             </Link>
             <Link href={LINK_CERTISIGN}>
               <ArrowFatLineDown size={15} />
-                Driver Token SafeNet
-                <Image
-                  src={tkCert}
-                  width={130}
-                  height={100}
-                  quality={100}
-                  priority={true}
-                  alt="Token Certisign"
-                />
+              Driver Token SafeNet
+              <Image
+                src={tkCert}
+                width={130}
+                height={100}
+                quality={100}
+                priority={true}
+                alt="Token Certisign"
+              />
             </Link>
-                    
+
             <Link href={LINK_SAFESIGN}>
               <ArrowFatLineDown size={15} />
-                Driver Token GD-Safesign
-                <Image
-                  src={tkSafe}
-                  width={130}
-                  height={100}
-                  quality={100}
-                  priority={true}
-                  alt="Token Safesign"
-                />
+              Driver Token GD-Safesign
+              <Image
+                src={tkSafe}
+                width={130}
+                height={100}
+                quality={100}
+                priority={true}
+                alt="Token Safesign"
+              />
             </Link>
-            
+
             <Link href={LINK_PJE_PRO}>
               <ArrowFatLineDown size={15} />
-                Assinador PjeOffice PRO
+              Assinador PjeOffice PRO
             </Link>
 
             <Link href={LINK_PJE}>
-            <ArrowFatLineDown size={15} />
+              <ArrowFatLineDown size={15} />
               Assinador PjeOffice
             </Link>
           </ProgramsLinks>
@@ -110,14 +110,14 @@ export function Footer() {
 
           <ProgramsLinks>
             <Link href={LINK_ANYDESK} target="_blank">
-            <ArrowFatLineDown size={17} />
+              <ArrowFatLineDown size={17} />
               Download Anydesk
             </Link>
           </ProgramsLinks>
         </ContentLinks>
       </ContainerLinks>
 
-    <Contacts>
+      <Contacts>
         <div>
           <MapPinLine />
           <Text as="span">
@@ -131,7 +131,7 @@ export function Footer() {
           <Text as="span">(98) 2107-5412</Text>
         </div>
         <div>
-          <Phone />
+          <WhatsappLogo />
           <Text as="span">(98) 99145-4667</Text>
         </div>
 

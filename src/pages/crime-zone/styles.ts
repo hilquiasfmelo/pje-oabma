@@ -114,7 +114,7 @@ export const ContentOptions = styled('div', {
       justifyContent: 'center',
       padding: '$2 $10',
       fontWeight: '$regular',
-      borderRadius: 0,
+      borderRadius: '$sm',
     },
   },
 
