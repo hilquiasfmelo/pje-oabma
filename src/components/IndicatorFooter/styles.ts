@@ -13,23 +13,22 @@ const floatFromUpDown = keyframes({
 })
 
 export const Container = styled('div', {
-  width: '$16',
-  height: '$16',
+  width: '$12',
+  height: '$12',
   borderRadius: '$full',
-  background: '$tomato8',
+  background: '$blue7',
   color: 'white',
   position: 'absolute',
   zIndex: 1,
   animation: `${floatFromUpDown} 2s ease-in-out infinite`,
-
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   cursor: 'pointer',
 
   bottom: 0,
-  marginBottom: '$16',
-  marginLeft: '$2',
+  marginBottom: '$7',
+  marginLeft: '$3',
 
   a: {
     all: 'unset',
@@ -38,12 +37,12 @@ export const Container = styled('div', {
     alignItems: 'center',
 
     svg: {
-      width: '$8',
-      height: '$8',
+      width: '$5',
+      height: '$5',
     },
 
     strong: {
-      fontSize: '$xs',
+      fontSize: 'x-small',
     },
   },
 
