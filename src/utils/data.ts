@@ -840,6 +840,10 @@ export const statesData: State[] = [
         name: 'TRT 15 - 2º GRAU',
         url: 'https://pje.trt15.jus.br/segundograu/login.seam',
       },
+      {
+        name: 'ESAJ',
+        url: 'https://esaj.tjsp.jus.br/esaj/portal.do?servico=740000',
+      },
     ],
   },
   {
