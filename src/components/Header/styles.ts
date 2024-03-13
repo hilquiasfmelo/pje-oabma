@@ -3,7 +3,7 @@ import { Button } from '../Button'
 import { Text } from '../Text'
 
 export const Container = styled('header', {
-  height: '$16',
+  height: '60px',
   color: '$gray12',
   background: '$blue5',
   borderBottom: '1px solid $gray12',

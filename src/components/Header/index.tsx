@@ -50,7 +50,7 @@ export function Header() {
             <Image
               src={site}
               width={80}
-              height={30}
+              height={40}
               quality={100}
               priority
               alt="Logo Pje"
