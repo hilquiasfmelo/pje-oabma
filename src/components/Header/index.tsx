@@ -49,8 +49,8 @@ export function Header() {
           <div className="site">
             <Image
               src={site}
-              width={100}
-              height={50}
+              width={80}
+              height={30}
               quality={100}
               priority
               alt="Logo Pje"
@@ -59,8 +59,8 @@ export function Header() {
           <div className="img">
             <Image
               src={oabLogo}
-              width={90}
-              height={40}
+              width={70}
+              height={30}
               quality={100}
               priority
               alt="Logo Pje"

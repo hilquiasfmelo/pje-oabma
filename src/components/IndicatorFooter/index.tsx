@@ -8,7 +8,7 @@ export function IndicatorFooter() {
     <Tooltip title="📥 Downloads" placement="top" arrow>
       <Container>
         <a href="#footer">
-          <strong>Suporte</strong>
+          <strong>Ajuda</strong>
           <ArrowFatLineDown weight="duotone" />
         </a>
       </Container>

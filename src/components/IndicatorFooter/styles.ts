@@ -42,7 +42,8 @@ export const Container = styled('div', {
     },
 
     strong: {
-      fontSize: 'x-small',
+      fontSize: '$xxs',
+      fontWeights: '$regular',
     },
   },
 

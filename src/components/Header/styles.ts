@@ -3,7 +3,7 @@ import { Button } from '../Button'
 import { Text } from '../Text'
 
 export const Container = styled('header', {
-  height: '$20',
+  height: '$16',
   color: '$gray12',
   background: '$blue5',
   borderBottom: '1px solid $gray12',
@@ -111,6 +111,7 @@ export const ContentImage = styled('a', {
     [`> ${Text}`]: {
       marginTop: '-$3',
       color: '#FFF',
+      fontSize: '$sm',
     },
   },
 })

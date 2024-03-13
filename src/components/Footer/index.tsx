@@ -27,7 +27,6 @@ import {
   LINK_ANYDESK,
   LINK_CERTISIGN,
   LINK_JAVA,
-  LINK_PJE,
   LINK_PJE_PRO,
   LINK_SAFESIGN,
 } from '@/utils/links-download'
@@ -78,9 +77,14 @@ export function Footer() {
               />
             </Link>
 
-            <Link href={LINK_PJE}>
+            {/* <Link href={LINK_PJE}>
               <ArrowFatLineDown size={15} />
               Assinador PjeOffice
+            </Link> */}
+
+            <Link href={LINK_PJE_PRO}>
+              <ArrowFatLineDown size={15} />
+              Assinador PjeOffice PRO
             </Link>
 
             <Link href={LINK_CERTISIGN}>
@@ -94,11 +98,6 @@ export function Footer() {
                 priority={true}
                 alt="Token Certisign"
               />
-            </Link>
-
-            <Link href={LINK_PJE_PRO}>
-              <ArrowFatLineDown size={15} />
-              Assinador PjeOffice PRO
             </Link>
           </ProgramsLinks>
         </ContentLinks>

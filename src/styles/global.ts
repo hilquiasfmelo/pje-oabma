@@ -10,7 +10,7 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Plus Jakarta Sans, sans-serif',
     color: '$gray4',
     background: 'radial-gradient(circle, #ddd 5%, transparent 11%)',
     backgroundSize: '3em 4em',
@@ -20,7 +20,7 @@ export const globalStyles = globalCss({
     '-webkit-font-smoothing': 'antialiased',
     // Configuração customizado da scrollbar default
     '&::-webkit-scrollbar': {
-      width: '12px',
+      width: '6px',
     },
     '&::-webkit-scrollbar-track': {
       boxShadow: 'inset 0 0 5px #ccc',
@@ -28,7 +28,7 @@ export const globalStyles = globalCss({
     },
     '&::-webkit-scrollbar-thumb': {
       background: '#A42A12',
-      borderRadius: '4px',
+      borderRadius: '1px',
     },
     '&::-webkit-scrollbar-thumb:hover': {
       background: '#7b200e',
