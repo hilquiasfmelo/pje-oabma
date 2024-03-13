@@ -16,7 +16,7 @@ export const LINK_PJE =
   'https://cnj-pje-programs.s3-sa-east-1.amazonaws.com/pje-office/PJeOffice.exe'
 
 export const LINK_PJE_PRO =
-  'https://pjeoffice.trf3.jus.br/pjeoffice-pro/pjeoffice-pro-v2.5.11u-windows_x64.exe'
+  'https://pje-office.pje.jus.br/pro/pjeoffice-pro-v2.5.13u-windows_x64.exe'
 
 export const LINK_SEEU = 'https://seeu.pje.jus.br/seeu'
 
