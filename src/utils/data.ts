@@ -605,11 +605,11 @@ export const statesData: State[] = [
     courts: [
       {
         name: 'TJPI 1° GRAU',
-        url: 'https://tjpi.pje.jus.br/1g/login.seam',
+        url: 'https://pje.tjpi.jus.br/1g/login.seam',
       },
       {
         name: 'TJPI 2° GRAU',
-        url: 'https://tjpi.pje.jus.br/2g/login.seam',
+        url: 'https://pje.tjpi.jus.br/2g/login.seam',
       },
       {
         name: 'JUSTIÇA ELEITORAL',
