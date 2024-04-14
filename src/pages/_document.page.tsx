@@ -38,7 +38,7 @@ export default function Document() {
         />
         <meta
           property="og:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://pje-oabma.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-oabma.c054f329.png&w=96&q=100"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -50,7 +50,7 @@ export default function Document() {
         />
         <meta
           property="twitter:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://pje-oabma.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-oabma.c054f329.png&w=96&q=100"
         />
       </Head>
 
