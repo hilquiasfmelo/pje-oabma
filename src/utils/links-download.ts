@@ -1,7 +1,7 @@
 export const SITE_OABMA = 'https://www.oabma.org.br'
 
 export const LINK_JAVA =
-  'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4'
+  'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249851_43d62d619be4e416215729597d70b8ac'
 
 export const LINK_SAFESIGN =
   'https://safesign.gdamericadosul.com.br/content/windows_x64_3.5.3.0_aet.zip'
