@@ -1,7 +1,7 @@
 export const SITE_OABMA = 'https://www.oabma.org.br'
 
 export const LINK_JAVA =
-  'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249851_43d62d619be4e416215729597d70b8ac'
+  'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249833_43d62d619be4e416215729597d70b8ac'
 
 export const LINK_SAFESIGN =
   'https://safesign.gdamericadosul.com.br/content/windows_x64_3.5.3.0_aet.zip'
@@ -12,11 +12,8 @@ export const LINK_CERTISIGN =
 export const LINK_ANYDESK =
   'https://anydesk.com/en/downloads/windows?dv=win_exe'
 
-export const LINK_PJE =
-  'https://cnj-pje-programs.s3-sa-east-1.amazonaws.com/pje-office/PJeOffice.exe'
-
 export const LINK_PJE_PRO =
-  'https://pje-office.pje.jus.br/pro/pjeoffice-pro-v2.5.13u-windows_x64.exe'
+  'https://pje-office.pje.jus.br/pro/pjeoffice-pro-v2.5.14u-windows_x64.exe'
 
 export const LINK_SEEU = 'https://seeu.pje.jus.br/seeu'
 

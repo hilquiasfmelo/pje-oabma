@@ -38,11 +38,11 @@ export const statesData: State[] = [
       },
       {
         name: 'TRT 16 - 1º GRAU',
-        url: 'https://pje.trt16.jus.br/primeirograu/authenticateSSO.seam',
+        url: 'https://pje.trt16.jus.br/primeirograu/login.seam',
       },
       {
         name: 'TRT 16 - 2º GRAU',
-        url: 'https://pje.trt16.jus.br/segundograu/authenticateSSO.seam',
+        url: 'https://pje.trt16.jus.br/segundograu/login.seam',
       },
     ],
   },

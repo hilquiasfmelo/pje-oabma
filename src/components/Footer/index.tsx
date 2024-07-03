@@ -77,11 +77,6 @@ export function Footer() {
               />
             </Link>
 
-            {/* <Link href={LINK_PJE}>
-              <ArrowFatLineDown size={15} />
-              Assinador PjeOffice
-            </Link> */}
-
             <Link href={LINK_PJE_PRO}>
               <ArrowFatLineDown size={15} />
               Assinador PjeOffice PRO
