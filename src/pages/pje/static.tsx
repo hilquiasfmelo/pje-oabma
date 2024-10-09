@@ -73,7 +73,7 @@ export function Pje() {
           Escolha qual <strong>Estado</strong> e <strong>Tribunal</strong> você
           deseja acessar:
         </Text>
-        <ContentOptions onSubmit={handleAccessTribunal}>
+        <ContentOptions>
           <Controller
             name="stateId"
             control={control}
